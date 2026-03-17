@@ -15,4 +15,6 @@ To facilitate reproducibility and provide a clear review path, the package is or
 
 The artifact package is designed for Ubuntu/Linux workflows. The online scenario generation module requires a Mininet-enabled environment with root privileges, while the offline benchmark module requires a Python environment with the project dependencies installed.
 
+Packet captures (`full_arena_v2.pcap`) are generated locally by the Mininet module and are therefore not tracked in the repository.
+
 Detailed execution commands, expected inputs, and output locations are documented in the `README.md` file of each submodule.
