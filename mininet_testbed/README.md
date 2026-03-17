@@ -10,11 +10,21 @@ The generated traffic traces serve as the primary data source for graph construc
 
 Execution is intended for Ubuntu/Linux with Mininet installed and runnable via `sudo`. A Python environment is also required for the auxiliary traffic-generation scripts invoked by the topology runner.
 
+Recommended installation on Ubuntu:
+
+```bash
+conda env create -f ../environment.yml
+conda activate cabench
+sudo apt-get update
+sudo apt-get install -y mininet openvswitch-switch tcpdump
+```
+
 The Mininet module requires the following system and Python dependencies:
 
 - Ubuntu/Linux
 - `sudo` access
 - Mininet
+- `openvswitch-switch`
 - `tcpdump`
 - Python 3
 - `locust`

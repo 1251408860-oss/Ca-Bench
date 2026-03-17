@@ -1,0 +1,20 @@
+name: cabench
+channels:
+  - pyg
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - scapy
+  - requests
+  - pytorch
+  - cpuonly
+  - pytorch-geometric
+  - pip:
+      - flwr
+      - locust
+      - openai

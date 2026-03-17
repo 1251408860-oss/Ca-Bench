@@ -17,7 +17,25 @@ The artifact package is designed for Ubuntu/Linux workflows. The online scenario
 
 Packet captures (`full_arena_v2.pcap`) are generated locally by the Mininet module and are therefore not tracked in the repository.
 
-No packaged lockfile is currently provided in the repository. Reviewers should prepare the runtime environment manually according to the dependency summaries below.
+An example Conda environment file is provided as [`environment.yml`](./environment.yml). Reviewers may use it as a starting point for the Python runtime setup.
+
+## Quick Installation
+
+Create the Python environment:
+
+```bash
+conda env create -f environment.yml
+conda activate cabench
+```
+
+Install the Mininet-side system dependencies on Ubuntu:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y mininet openvswitch-switch tcpdump
+```
+
+The Mininet scenario-generation script also requires a valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` in the shell environment.
 
 ### Offline benchmark dependencies
 
@@ -34,6 +52,7 @@ No packaged lockfile is currently provided in the repository. Reviewers should p
 
 - Ubuntu/Linux with `sudo`
 - Mininet
+- `openvswitch-switch`
 - `tcpdump`
 - `locust`
 - `scapy`
