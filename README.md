@@ -17,4 +17,31 @@ The artifact package is designed for Ubuntu/Linux workflows. The online scenario
 
 Packet captures (`full_arena_v2.pcap`) are generated locally by the Mininet module and are therefore not tracked in the repository.
 
+No packaged lockfile is currently provided in the repository. Reviewers should prepare the runtime environment manually according to the dependency summaries below.
+
+### Offline benchmark dependencies
+
+- Python 3 on Ubuntu/Linux
+- `numpy`
+- `matplotlib`
+- `torch`
+- `torch-geometric`
+- `scikit-learn`
+- `flwr`
+- `scapy`
+
+### Mininet scenario-generation dependencies
+
+- Ubuntu/Linux with `sudo`
+- Mininet
+- `tcpdump`
+- `locust`
+- `scapy`
+- `requests`
+- A valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` for the default scenario-generation script
+
+### Special Mininet environment requirement
+
+The benchmark does not start from a downloadable dataset. Reviewers must first run the Mininet module in a Mininet-capable Ubuntu/Linux environment to generate the five packet captures under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`, and only then run the offline benchmark pipeline.
+
 Detailed execution commands, expected inputs, and output locations are documented in the `README.md` file of each submodule.
