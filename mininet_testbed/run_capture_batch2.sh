@@ -10,6 +10,7 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TESTBED_DIR="$REPO_ROOT/mininet_testbed"
 DATA_DIR="$TESTBED_DIR/real_collection"
 PY_BIN="${PY_BIN:-/home/user/miniconda3/envs/DL/bin/python}"
+PAYLOAD_FILE="$TESTBED_DIR/llm_payloads.json"
 
 NUM_LLM_SESSIONS="${NUM_LLM_SESSIONS:-60}"
 NUM_TOTAL_PAYLOADS="${NUM_TOTAL_PAYLOADS:-8000}"
@@ -17,12 +18,13 @@ NUM_TOTAL_PAYLOADS="${NUM_TOTAL_PAYLOADS:-8000}"
 export KEEP_PROXY="${KEEP_PROXY:-0}"
 export LLM_TRANSPORT="${LLM_TRANSPORT:-requests}"
 export LLM_TIMEOUT_SEC="${LLM_TIMEOUT_SEC:-120}"
-export REQUIRE_REAL_LLM=1
+export REQUIRE_REAL_LLM="${REQUIRE_REAL_LLM:-0}"
+export REGENERATE_PAYLOADS="${REGENERATE_PAYLOADS:-0}"
 export NUM_LLM_SESSIONS
 export NUM_TOTAL_PAYLOADS
 
-if [[ -z "${LLM_API_KEY:-${DEEPSEEK_API_KEY:-}}" ]]; then
-  echo "[ERROR] missing LLM_API_KEY or DEEPSEEK_API_KEY in environment"
+if [[ ("$REGENERATE_PAYLOADS" == "1" || ! -s "$PAYLOAD_FILE") && "$REQUIRE_REAL_LLM" == "1" && -z "${LLM_API_KEY:-${DEEPSEEK_API_KEY:-${OPENAI_API_KEY:-}}}" ]]; then
+  echo "[ERROR] missing LLM_API_KEY, DEEPSEEK_API_KEY, or OPENAI_API_KEY in environment"
   exit 1
 fi
 
@@ -65,7 +67,7 @@ capture() {
   CORE_QUEUE="$core_queue" \
   BENIGN_ENGINE=locust \
   ATTACK_ENGINE=http \
-  REQUIRE_REAL_LLM=1 \
+  REQUIRE_REAL_LLM="$REQUIRE_REAL_LLM" \
   PYTHON_BIN="$PY_BIN" \
   PCAP_FILE="$pcap" \
   MANIFEST_FILE="$manifest" \
@@ -82,7 +84,11 @@ capture() {
 }
 
 cd "$TESTBED_DIR"
-run "$PY_BIN" generate_llm_payloads.py
+if [[ "$REGENERATE_PAYLOADS" == "1" || ! -s "$PAYLOAD_FILE" ]]; then
+  run "$PY_BIN" generate_llm_payloads.py
+else
+  echo "[INFO] using bundled payload file: $PAYLOAD_FILE"
+fi
 
 capture "scenario_d_three_tier_low2"     "three_tier" "low"    "mixed"       "20260310" "20" "60"  "180" "10" "5ms" "1000"
 capture "scenario_e_three_tier_high2"    "three_tier" "high"   "mixed"       "20260311" "25" "80"  "180" "8"  "6ms" "900"

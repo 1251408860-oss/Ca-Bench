@@ -3,5 +3,3 @@ __pycache__/
 *.log
 *.pt
 *.pth
-
-mininet_testbed/llm_payloads.json
