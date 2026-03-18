@@ -61,7 +61,7 @@ The Mininet scenario-generation script requires a valid `LLM_API_KEY` or `DEEPSE
 - `locust`
 - `scapy`
 - `requests`
-- A valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` for the default scenario-generation script
+- A valid `LLM_API_KEY`, `DEEPSEEK_API_KEY`, or `OPENAI_API_KEY` only when reviewers explicitly regenerate LLM payloads from scratch
 
 ### Offline-first reproduction path
 
@@ -71,6 +71,6 @@ For paper table and figure regeneration, the repository also includes the precom
 
 ### Optional Mininet regeneration path
 
-Reviewers who wish to reproduce the traffic-generation stage itself may rerun the Mininet module in a Mininet-capable Ubuntu/Linux environment. That optional path regenerates the same five packet captures under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`.
+Reviewers who wish to reproduce the traffic-generation stage itself may rerun the Mininet module in a Mininet-capable Ubuntu/Linux environment. The default batch script reuses the bundled `mininet_testbed/llm_payloads.json` and therefore does not require any API key. Real LLM payload regeneration remains optional via `REGENERATE_PAYLOADS=1`, in which case a reviewer-provided compatible API key is required.
 
 Detailed execution commands, expected inputs, and output locations are documented in the `README.md` file of each submodule.

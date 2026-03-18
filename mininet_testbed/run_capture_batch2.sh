@@ -51,9 +51,13 @@ capture() {
 
   local pcap="$out_dir/full_arena_v2.pcap"
   local manifest="$out_dir/arena_manifest_v2.json"
+  local tmp_pcap="$out_dir/full_arena_v2.pcap.tmp"
+  local tmp_manifest="$out_dir/arena_manifest_v2.json.tmp"
   local log="$out_dir/mininet.log"
 
   echo "[SCENARIO] $name topo=$topo load=$load bot_mode=$bot_mode seed=$seed users=$users bots=$bots bw=$core_bw delay=$core_delay queue=$core_queue"
+
+  rm -f "$tmp_pcap" "$tmp_manifest"
 
   set +e
   TOPOLOGY_MODE="$topo" \
@@ -69,16 +73,20 @@ capture() {
   ATTACK_ENGINE=http \
   REQUIRE_REAL_LLM="$REQUIRE_REAL_LLM" \
   PYTHON_BIN="$PY_BIN" \
-  PCAP_FILE="$pcap" \
-  MANIFEST_FILE="$manifest" \
+  PCAP_FILE="$tmp_pcap" \
+  MANIFEST_FILE="$tmp_manifest" \
   "$PY_BIN" "$TESTBED_DIR/mininet_arena_v2.py" "$duration_sec" > "$log" 2>&1
   local rc=$?
   set -e
 
-  if [[ ! -s "$pcap" || ! -s "$manifest" ]]; then
+  if [[ ! -s "$tmp_pcap" || ! -s "$tmp_manifest" ]]; then
+    rm -f "$tmp_pcap" "$tmp_manifest"
     echo "[ERROR] capture artifacts missing for $name (rc=$rc)"
     exit 1
   fi
+
+  mv -f "$tmp_pcap" "$pcap"
+  mv -f "$tmp_manifest" "$manifest"
 
   echo "[OK] $name rc=$rc pcap=$(du -h "$pcap" | awk '{print $1}')"
 }

@@ -33,7 +33,13 @@ The Mininet module requires the following system and Python dependencies:
 - `scapy`
 - `requests`
 
-The default batch script also requires a valid `LLM_API_KEY` or `DEEPSEEK_API_KEY`, because `run_capture_batch2.sh` enables real LLM payload generation by default.
+The default batch script reuses the bundled `llm_payloads.json` file and therefore does not require any API key.
+
+If reviewers want to regenerate the LLM payload file itself, they can opt in explicitly:
+
+```bash
+sudo -E REGENERATE_PAYLOADS=1 REQUIRE_REAL_LLM=1 LLM_API_KEY=... bash run_capture_batch2.sh
+```
 
 This module must be executed in a real Mininet-capable environment. It is not a pure Python preprocessing step.
 
