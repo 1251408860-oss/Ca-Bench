@@ -27,7 +27,7 @@ The offline pipeline depends on the following Python packages:
 - `flwr`
 - `scapy`
 
-The repository provides an example Conda environment file at `../environment.yml`.
+The repository provides an example Conda environment file at `../environment.yml`, and locked evaluation dependencies under `../repro/`.
 
 Before running this module, ensure that the scenario captures already exist under:
 
@@ -35,7 +35,9 @@ Before running this module, ensure that the scenario captures already exist unde
 ../mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap
 ```
 
-These packet captures are not shipped with the repository and must be generated locally through the Mininet module first.
+These packet captures are bundled with the repository for the five paper scenarios, so reviewers can start directly from the offline benchmark pipeline.
+
+For direct regeneration of the paper figures and tables, the precomputed run summaries required by `make_paper_tables_figs.py` are also shipped under `../paper_artifacts/runs/`.
 
 ## Execution Entry
 

@@ -1,0 +1,8 @@
+stage,seconds,flow_nodes,edges
+Primary graph build,22.934265613555908,5975,8142
+Stress graph build,18.31297516822815,6984,9755
+Protocol prep,2.2150726318359375,6984,9755
+Central train,20.94441056251526,,
+Prediction export,2.834517478942871,,
+Baseline eval,19.294283390045166,,
+Federated run,24.177854299545288,,

@@ -1,0 +1,1255 @@
+{
+  "config": {
+    "project_dir": "/home/user/FedSTGCN",
+    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
+    "suite_dir": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite",
+    "output_dir": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus",
+    "scenario_dir": "/home/user/FedSTGCN/real_collection/scenario_e_three_tier_high2",
+    "congestion_graph": "",
+    "seeds": "11,22,33,44,55,66,77,88,99",
+    "epochs": 140,
+    "skip_existing": true
+  },
+  "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/protocol_graphs/congestion_ood.pt",
+  "stage3_rows": [
+    {
+      "seed": 11,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.47593984962406016,
+        "precision": 0.925531914893617,
+        "recall": 0.20303383897316218,
+        "f1": 0.3330143540669856,
+        "tp": 174,
+        "fp": 14,
+        "fn": 683,
+        "tn": 459,
+        "threshold": 0.550000011920929,
+        "auroc": 0.4758055165642477,
+        "auprc": 0.6672654937688349,
+        "ece": 0.5222018361091614,
+        "fpr": 0.02959830866807611
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed11/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed11/pi_gnn_model.pt"
+    },
+    {
+      "seed": 11,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.3233082706766917,
+        "precision": 0.18840579710144928,
+        "recall": 0.015169194865810968,
+        "f1": 0.028077753779697623,
+        "tp": 13,
+        "fp": 56,
+        "fn": 844,
+        "tn": 417,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.28287378410848607,
+        "auprc": 0.5236021716210862,
+        "ece": 0.6387230753898621,
+        "fpr": 0.11839323467230443
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed11/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed11/pi_gnn_model.pt"
+    },
+    {
+      "seed": 22,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.4842105263157895,
+        "precision": 0.9130434782608695,
+        "recall": 0.220536756126021,
+        "f1": 0.3552631578947368,
+        "tp": 189,
+        "fp": 18,
+        "fn": 668,
+        "tn": 455,
+        "threshold": 0.550000011920929,
+        "auroc": 0.44178645700992447,
+        "auprc": 0.6537113774007907,
+        "ece": 0.5100393891334534,
+        "fpr": 0.03805496828752643
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed22/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed22/pi_gnn_model.pt"
+    },
+    {
+      "seed": 22,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.28270676691729324,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 97,
+        "fn": 857,
+        "tn": 376,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.2692143546123085,
+        "auprc": 0.5091057354933831,
+        "ece": 0.6396967768669128,
+        "fpr": 0.20507399577167018
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed22/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed22/pi_gnn_model.pt"
+    },
+    {
+      "seed": 33,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.45789473684210524,
+        "precision": 0.9096385542168675,
+        "recall": 0.176196032672112,
+        "f1": 0.29521016617790813,
+        "tp": 151,
+        "fp": 15,
+        "fn": 706,
+        "tn": 458,
+        "threshold": 0.5,
+        "auroc": 0.4504688413537563,
+        "auprc": 0.6579126427964489,
+        "ece": 0.5355363488197327,
+        "fpr": 0.03171247357293869
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed33/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed33/pi_gnn_model.pt"
+    },
+    {
+      "seed": 33,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.3157894736842105,
+        "precision": 0.25688073394495414,
+        "recall": 0.03267211201866978,
+        "f1": 0.05797101449275363,
+        "tp": 28,
+        "fp": 81,
+        "fn": 829,
+        "tn": 392,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.3310481274715623,
+        "auprc": 0.5355403139708835,
+        "ece": 0.6382811069488525,
+        "fpr": 0.17124735729386892
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed33/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed33/pi_gnn_model.pt"
+    },
+    {
+      "seed": 44,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.4699248120300752,
+        "precision": 0.9269662921348315,
+        "recall": 0.19253208868144692,
+        "f1": 0.31884057971014496,
+        "tp": 165,
+        "fp": 13,
+        "fn": 692,
+        "tn": 460,
+        "threshold": 0.800000011920929,
+        "auroc": 0.49585677951258256,
+        "auprc": 0.6846771624128014,
+        "ece": 0.5085797309875488,
+        "fpr": 0.02748414376321353
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed44/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed44/pi_gnn_model.pt"
+    },
+    {
+      "seed": 44,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.3157894736842105,
+        "precision": 0.23232323232323232,
+        "recall": 0.026837806301050177,
+        "f1": 0.04811715481171548,
+        "tp": 23,
+        "fp": 76,
+        "fn": 834,
+        "tn": 397,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.24246782497576236,
+        "auprc": 0.496040913925583,
+        "ece": 0.6407995820045471,
+        "fpr": 0.160676532769556
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed44/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed44/pi_gnn_model.pt"
+    },
+    {
+      "seed": 55,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.4849624060150376,
+        "precision": 0.9257425742574258,
+        "recall": 0.21820303383897316,
+        "f1": 0.35316336166194523,
+        "tp": 187,
+        "fp": 15,
+        "fn": 670,
+        "tn": 458,
+        "threshold": 0.3499999940395355,
+        "auroc": 0.4369561946018487,
+        "auprc": 0.6614567501103402,
+        "ece": 0.5088597536087036,
+        "fpr": 0.03171247357293869
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed55/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed55/pi_gnn_model.pt"
+    },
+    {
+      "seed": 55,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.4766917293233083,
+        "precision": 0.8744186046511628,
+        "recall": 0.2193698949824971,
+        "f1": 0.35074626865671643,
+        "tp": 188,
+        "fp": 27,
+        "fn": 669,
+        "tn": 446,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.43760499900089056,
+        "auprc": 0.6569833115872048,
+        "ece": 0.625909149646759,
+        "fpr": 0.05708245243128964
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed55/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed55/pi_gnn_model.pt"
+    },
+    {
+      "seed": 66,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.43082706766917295,
+        "precision": 0.890625,
+        "recall": 0.13302217036172695,
+        "f1": 0.23147208121827412,
+        "tp": 114,
+        "fp": 14,
+        "fn": 743,
+        "tn": 459,
+        "threshold": 0.3499999940395355,
+        "auroc": 0.47843280433983537,
+        "auprc": 0.6724866455561773,
+        "ece": 0.5767992734909058,
+        "fpr": 0.02959830866807611
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed66/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed66/pi_gnn_model.pt"
+    },
+    {
+      "seed": 66,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.3736842105263158,
+        "precision": 0.7068965517241379,
+        "recall": 0.047841306884480746,
+        "f1": 0.08961748633879782,
+        "tp": 41,
+        "fp": 17,
+        "fn": 816,
+        "tn": 456,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.3535391909927201,
+        "auprc": 0.5583126174924284,
+        "ece": 0.6258888244628906,
+        "fpr": 0.035940803382663845
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed66/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed66/pi_gnn_model.pt"
+    },
+    {
+      "seed": 77,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.44661654135338347,
+        "precision": 0.9060402684563759,
+        "recall": 0.15752625437572929,
+        "f1": 0.268389662027833,
+        "tp": 135,
+        "fp": 14,
+        "fn": 722,
+        "tn": 459,
+        "threshold": 0.6499999761581421,
+        "auroc": 0.44124126395977914,
+        "auprc": 0.6482524462769956,
+        "ece": 0.5436137318611145,
+        "fpr": 0.02959830866807611
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed77/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed77/pi_gnn_model.pt"
+    },
+    {
+      "seed": 77,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.3556390977443609,
+        "precision": 0.5,
+        "recall": 0.045507584597432905,
+        "f1": 0.08342245989304814,
+        "tp": 39,
+        "fp": 39,
+        "fn": 818,
+        "tn": 434,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.32424924943445477,
+        "auprc": 0.5595379410787634,
+        "ece": 0.6245431900024414,
+        "fpr": 0.0824524312896406
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed77/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed77/pi_gnn_model.pt"
+    },
+    {
+      "seed": 88,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.46015037593984964,
+        "precision": 0.9161676646706587,
+        "recall": 0.17852975495915985,
+        "f1": 0.298828125,
+        "tp": 153,
+        "fp": 14,
+        "fn": 704,
+        "tn": 459,
+        "threshold": 0.5,
+        "auroc": 0.47900760063252257,
+        "auprc": 0.67506319346742,
+        "ece": 0.5455376505851746,
+        "fpr": 0.02959830866807611
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed88/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed88/pi_gnn_model.pt"
+    },
+    {
+      "seed": 88,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.3330827067669173,
+        "precision": 0.35294117647058826,
+        "recall": 0.042007001166861145,
+        "f1": 0.07507820646506778,
+        "tp": 36,
+        "fp": 66,
+        "fn": 821,
+        "tn": 407,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.2750659288880775,
+        "auprc": 0.5348761404374629,
+        "ece": 0.630969226360321,
+        "fpr": 0.13953488372093023
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed88/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed88/pi_gnn_model.pt"
+    },
+    {
+      "seed": 99,
+      "model": "data_only",
+      "metrics": {
+        "accuracy": 0.48947368421052634,
+        "precision": 0.9494949494949495,
+        "recall": 0.2193698949824971,
+        "f1": 0.3563981042654029,
+        "tp": 188,
+        "fp": 10,
+        "fn": 669,
+        "tn": 463,
+        "threshold": 0.550000011920929,
+        "auroc": 0.44705706765081,
+        "auprc": 0.6880935519747158,
+        "ece": 0.505711019039154,
+        "fpr": 0.021141649048625793
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed99/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed99/pi_gnn_model.pt"
+    },
+    {
+      "seed": 99,
+      "model": "physics_stable",
+      "metrics": {
+        "accuracy": 0.324812030075188,
+        "precision": 0.3217391304347826,
+        "recall": 0.043173862310385065,
+        "f1": 0.07613168724279835,
+        "tp": 37,
+        "fp": 78,
+        "fn": 820,
+        "tn": 395,
+        "threshold": 0.05000000074505806,
+        "auroc": 0.3466959080917996,
+        "auprc": 0.5520601620741008,
+        "ece": 0.6274351477622986,
+        "fpr": 0.1649048625792812
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed99/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed99/pi_gnn_model.pt"
+    }
+  ],
+  "baseline_rows": [
+    {
+      "seed": 11,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.3458646616541353,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.02748414376321353,
+          "roc_auc": 0.8195262987805931,
+          "auprc": 0.7945099927203191,
+          "ece": 0.5572575187969925,
+          "threshold": 0.44999999999999996,
+          "tp": 0,
+          "fp": 13,
+          "fn": 857,
+          "tn": 460
+        },
+        "gcn": {
+          "accuracy": 0.5669172932330827,
+          "precision": 0.9576547231270358,
+          "recall": 0.34305717619603265,
+          "f1": 0.5051546391752577,
+          "fpr": 0.02748414376321353,
+          "roc_auc": 0.8577810889552769,
+          "auprc": 0.9065069805995039,
+          "ece": 0.42326255171392957,
+          "threshold": 0.25,
+          "tp": 294,
+          "fp": 13,
+          "fn": 563,
+          "tn": 460
+        },
+        "graphsage": {
+          "accuracy": 0.4052631578947368,
+          "precision": 0.8666666666666667,
+          "recall": 0.09101516919486581,
+          "f1": 0.16473072861668425,
+          "fpr": 0.02536997885835095,
+          "roc_auc": 0.6910371249330843,
+          "auprc": 0.7454600620706746,
+          "ece": 0.5933969570272334,
+          "threshold": 0.1,
+          "tp": 78,
+          "fp": 12,
+          "fn": 779,
+          "tn": 461
+        },
+        "gatv2": {
+          "accuracy": 0.5684210526315789,
+          "precision": 0.966996699669967,
+          "recall": 0.3418903150525088,
+          "f1": 0.5051724137931035,
+          "fpr": 0.021141649048625793,
+          "roc_auc": 0.5521658472324669,
+          "auprc": 0.7649498420973542,
+          "ece": 0.4318434646440655,
+          "threshold": 0.1,
+          "tp": 293,
+          "fp": 10,
+          "fn": 564,
+          "tn": 463
+        },
+        "pi_gnn": {
+          "accuracy": 0.3233082706766917,
+          "precision": 0.18840579710144928,
+          "recall": 0.015169194865810968,
+          "f1": 0.028077753779697623,
+          "fpr": 0.11839323467230443,
+          "roc_auc": 0.28287378410848607,
+          "auprc": 0.5236021716210862,
+          "ece": 0.6387230204434056,
+          "threshold": 0.05000000074505806,
+          "tp": 13,
+          "fp": 56,
+          "fn": 844,
+          "tn": 417
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed11/baseline_eval.json"
+    },
+    {
+      "seed": 22,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.34661654135338343,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.02536997885835095,
+          "roc_auc": 0.8128199308764286,
+          "auprc": 0.7732720327913528,
+          "ece": 0.5675545112781956,
+          "threshold": 0.44999999999999996,
+          "tp": 0,
+          "fp": 12,
+          "fn": 857,
+          "tn": 461
+        },
+        "gcn": {
+          "accuracy": 0.5661654135338345,
+          "precision": 0.9635761589403974,
+          "recall": 0.3395565927654609,
+          "f1": 0.5021570319240726,
+          "fpr": 0.023255813953488372,
+          "roc_auc": 0.8542558361559203,
+          "auprc": 0.9054050036109902,
+          "ece": 0.4184503712948371,
+          "threshold": 0.35,
+          "tp": 291,
+          "fp": 11,
+          "fn": 566,
+          "tn": 462
+        },
+        "graphsage": {
+          "accuracy": 0.39097744360902253,
+          "precision": 0.9272727272727272,
+          "recall": 0.059509918319719954,
+          "f1": 0.11184210526315788,
+          "fpr": 0.008456659619450317,
+          "roc_auc": 0.30173104960763364,
+          "auprc": 0.5650112457794864,
+          "ece": 0.6064448813456388,
+          "threshold": 0.3,
+          "tp": 51,
+          "fp": 4,
+          "fn": 806,
+          "tn": 469
+        },
+        "gatv2": {
+          "accuracy": 0.5669172932330827,
+          "precision": 0.9606557377049181,
+          "recall": 0.3418903150525088,
+          "f1": 0.5043029259896731,
+          "fpr": 0.02536997885835095,
+          "roc_auc": 0.5575906414282578,
+          "auprc": 0.761289887123562,
+          "ece": 0.42782262815924055,
+          "threshold": 0.05,
+          "tp": 293,
+          "fp": 12,
+          "fn": 564,
+          "tn": 461
+        },
+        "pi_gnn": {
+          "accuracy": 0.28270676691729324,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.20507399577167018,
+          "roc_auc": 0.2692143546123085,
+          "auprc": 0.5091057354933831,
+          "ece": 0.639696781250081,
+          "threshold": 0.05000000074505806,
+          "tp": 0,
+          "fp": 97,
+          "fn": 857,
+          "tn": 376
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed22/baseline_eval.json"
+    },
+    {
+      "seed": 33,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.34661654135338343,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.02536997885835095,
+          "roc_auc": 0.8328403571137825,
+          "auprc": 0.8057458481246098,
+          "ece": 0.5559943609022555,
+          "threshold": 0.5,
+          "tp": 0,
+          "fp": 12,
+          "fn": 857,
+          "tn": 461
+        },
+        "gcn": {
+          "accuracy": 0.5661654135338345,
+          "precision": 0.9666666666666667,
+          "recall": 0.338389731621937,
+          "f1": 0.5012964563526361,
+          "fpr": 0.021141649048625793,
+          "roc_auc": 0.864683578341281,
+          "auprc": 0.9102436936900957,
+          "ece": 0.4123171698938199,
+          "threshold": 0.5,
+          "tp": 290,
+          "fp": 10,
+          "fn": 567,
+          "tn": 463
+        },
+        "graphsage": {
+          "accuracy": 0.3969924812030075,
+          "precision": 0.8985507246376812,
+          "recall": 0.07234539089848308,
+          "f1": 0.13390928725701945,
+          "fpr": 0.014799154334038054,
+          "roc_auc": 0.3442289712133136,
+          "auprc": 0.5809598222750918,
+          "ece": 0.603956929494312,
+          "threshold": 0.05,
+          "tp": 62,
+          "fp": 7,
+          "fn": 795,
+          "tn": 466
+        },
+        "gatv2": {
+          "accuracy": 0.5661654135338345,
+          "precision": 0.9487179487179487,
+          "recall": 0.3453908984830805,
+          "f1": 0.5064157399486742,
+          "fpr": 0.03382663847780127,
+          "roc_auc": 0.6441591568996524,
+          "auprc": 0.7969281363056213,
+          "ece": 0.42354538665950475,
+          "threshold": 0.5499999999999999,
+          "tp": 296,
+          "fp": 16,
+          "fn": 561,
+          "tn": 457
+        },
+        "pi_gnn": {
+          "accuracy": 0.3157894736842105,
+          "precision": 0.25688073394495414,
+          "recall": 0.03267211201866978,
+          "f1": 0.05797101449275363,
+          "fpr": 0.17124735729386892,
+          "roc_auc": 0.3310481274715623,
+          "auprc": 0.5355403139708835,
+          "ece": 0.6382811669039686,
+          "threshold": 0.05000000074505806,
+          "tp": 28,
+          "fp": 81,
+          "fn": 829,
+          "tn": 392
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed33/baseline_eval.json"
+    },
+    {
+      "seed": 44,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.3458646616541353,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.02748414376321353,
+          "roc_auc": 0.8396182661874232,
+          "auprc": 0.8054398177627864,
+          "ece": 0.5466691729323309,
+          "threshold": 0.44999999999999996,
+          "tp": 0,
+          "fp": 13,
+          "fn": 857,
+          "tn": 460
+        },
+        "gcn": {
+          "accuracy": 0.5699248120300752,
+          "precision": 0.9641693811074918,
+          "recall": 0.3453908984830805,
+          "f1": 0.5085910652920963,
+          "fpr": 0.023255813953488372,
+          "roc_auc": 0.8549564462294102,
+          "auprc": 0.9067843745928024,
+          "ece": 0.4226937207739607,
+          "threshold": 0.2,
+          "tp": 296,
+          "fp": 11,
+          "fn": 561,
+          "tn": 462
+        },
+        "graphsage": {
+          "accuracy": 0.38571428571428573,
+          "precision": 0.9166666666666666,
+          "recall": 0.051341890315052506,
+          "f1": 0.09723756906077348,
+          "fpr": 0.008456659619450317,
+          "roc_auc": 0.2898280791689383,
+          "auprc": 0.5526869423839604,
+          "ece": 0.6095226524286674,
+          "threshold": 0.44999999999999996,
+          "tp": 44,
+          "fp": 4,
+          "fn": 813,
+          "tn": 469
+        },
+        "gatv2": {
+          "accuracy": 0.5669172932330827,
+          "precision": 0.9636963696369637,
+          "recall": 0.34072345390898484,
+          "f1": 0.503448275862069,
+          "fpr": 0.023255813953488372,
+          "roc_auc": 0.6870505549374508,
+          "auprc": 0.8138723070500998,
+          "ece": 0.43117759778948594,
+          "threshold": 0.2,
+          "tp": 292,
+          "fp": 11,
+          "fn": 565,
+          "tn": 462
+        },
+        "pi_gnn": {
+          "accuracy": 0.3157894736842105,
+          "precision": 0.23232323232323232,
+          "recall": 0.026837806301050177,
+          "f1": 0.04811715481171548,
+          "fpr": 0.160676532769556,
+          "roc_auc": 0.24246782497576236,
+          "auprc": 0.496040913925583,
+          "ece": 0.6407995685812479,
+          "threshold": 0.05000000074505806,
+          "tp": 23,
+          "fp": 76,
+          "fn": 834,
+          "tn": 397
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed44/baseline_eval.json"
+    },
+    {
+      "seed": 55,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.34661654135338343,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.02536997885835095,
+          "roc_auc": 0.8340121521310635,
+          "auprc": 0.8030617497606244,
+          "ece": 0.5524135338345865,
+          "threshold": 0.5,
+          "tp": 0,
+          "fp": 12,
+          "fn": 857,
+          "tn": 461
+        },
+        "gcn": {
+          "accuracy": 0.5691729323308271,
+          "precision": 0.9765100671140939,
+          "recall": 0.3395565927654609,
+          "f1": 0.503896103896104,
+          "fpr": 0.014799154334038054,
+          "roc_auc": 0.862633553795259,
+          "auprc": 0.9100108466650273,
+          "ece": 0.4154809363756526,
+          "threshold": 0.39999999999999997,
+          "tp": 291,
+          "fp": 7,
+          "fn": 566,
+          "tn": 466
+        },
+        "graphsage": {
+          "accuracy": 0.3849624060150376,
+          "precision": 0.8979591836734694,
+          "recall": 0.051341890315052506,
+          "f1": 0.09713024282560705,
+          "fpr": 0.010570824524312896,
+          "roc_auc": 0.27995786471811546,
+          "auprc": 0.5447632350612289,
+          "ece": 0.6084355074657186,
+          "threshold": 0.5,
+          "tp": 44,
+          "fp": 5,
+          "fn": 813,
+          "tn": 468
+        },
+        "gatv2": {
+          "accuracy": 0.5714285714285714,
+          "precision": 0.9735973597359736,
+          "recall": 0.3442240373395566,
+          "f1": 0.5086206896551724,
+          "fpr": 0.016913319238900635,
+          "roc_auc": 0.5372248440279158,
+          "auprc": 0.7594171118887714,
+          "ece": 0.42055236917598304,
+          "threshold": 0.7,
+          "tp": 295,
+          "fp": 8,
+          "fn": 562,
+          "tn": 465
+        },
+        "pi_gnn": {
+          "accuracy": 0.4766917293233083,
+          "precision": 0.8744186046511628,
+          "recall": 0.2193698949824971,
+          "f1": 0.35074626865671643,
+          "fpr": 0.05708245243128964,
+          "roc_auc": 0.43760499900089056,
+          "auprc": 0.6569833115872048,
+          "ece": 0.6259091910897382,
+          "threshold": 0.05000000074505806,
+          "tp": 188,
+          "fp": 27,
+          "fn": 669,
+          "tn": 446
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed55/baseline_eval.json"
+    },
+    {
+      "seed": 66,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.3458646616541353,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.02748414376321353,
+          "roc_auc": 0.8309149128801242,
+          "auprc": 0.7928756095143261,
+          "ece": 0.5519830827067669,
+          "threshold": 0.5,
+          "tp": 0,
+          "fp": 13,
+          "fn": 857,
+          "tn": 460
+        },
+        "gcn": {
+          "accuracy": 0.5669172932330827,
+          "precision": 0.9795221843003413,
+          "recall": 0.3348891481913652,
+          "f1": 0.49913043478260866,
+          "fpr": 0.012684989429175475,
+          "roc_auc": 0.8383120231102648,
+          "auprc": 0.8968129955025113,
+          "ece": 0.4281721721498324,
+          "threshold": 0.3,
+          "tp": 287,
+          "fp": 6,
+          "fn": 570,
+          "tn": 467
+        },
+        "graphsage": {
+          "accuracy": 0.3879699248120301,
+          "precision": 0.9215686274509803,
+          "recall": 0.05484247374562427,
+          "f1": 0.10352422907488988,
+          "fpr": 0.008456659619450317,
+          "roc_auc": 0.3054758597891756,
+          "auprc": 0.5575494329304653,
+          "ece": 0.6071806638786741,
+          "threshold": 0.5,
+          "tp": 47,
+          "fp": 4,
+          "fn": 810,
+          "tn": 469
+        },
+        "gatv2": {
+          "accuracy": 0.562406015037594,
+          "precision": 0.9568106312292359,
+          "recall": 0.33605600933488916,
+          "f1": 0.49740932642487046,
+          "fpr": 0.02748414376321353,
+          "roc_auc": 0.6431353780950807,
+          "auprc": 0.8004025255425619,
+          "ece": 0.43091466461439165,
+          "threshold": 0.35,
+          "tp": 288,
+          "fp": 13,
+          "fn": 569,
+          "tn": 460
+        },
+        "pi_gnn": {
+          "accuracy": 0.3736842105263158,
+          "precision": 0.7068965517241379,
+          "recall": 0.047841306884480746,
+          "f1": 0.08961748633879782,
+          "fpr": 0.035940803382663845,
+          "roc_auc": 0.3535391909927201,
+          "auprc": 0.5583126174924284,
+          "ece": 0.6258887416224478,
+          "threshold": 0.05000000074505806,
+          "tp": 41,
+          "fp": 17,
+          "fn": 816,
+          "tn": 456
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed66/baseline_eval.json"
+    },
+    {
+      "seed": 77,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.3451127819548872,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.02959830866807611,
+          "roc_auc": 0.8286354632044031,
+          "auprc": 0.7933222584638573,
+          "ece": 0.5538195488721805,
+          "threshold": 0.44999999999999996,
+          "tp": 0,
+          "fp": 14,
+          "fn": 857,
+          "tn": 459
+        },
+        "gcn": {
+          "accuracy": 0.5676691729323309,
+          "precision": 0.9731543624161074,
+          "recall": 0.338389731621937,
+          "f1": 0.502164502164502,
+          "fpr": 0.016913319238900635,
+          "roc_auc": 0.8721904672625143,
+          "auprc": 0.916493623739064,
+          "ece": 0.42139399468323063,
+          "threshold": 0.35,
+          "tp": 290,
+          "fp": 8,
+          "fn": 567,
+          "tn": 465
+        },
+        "graphsage": {
+          "accuracy": 0.39398496240601505,
+          "precision": 0.9322033898305084,
+          "recall": 0.06417736289381563,
+          "f1": 0.12008733624454149,
+          "fpr": 0.008456659619450317,
+          "roc_auc": 0.3667718404089194,
+          "auprc": 0.5837418413949053,
+          "ece": 0.6066328744154045,
+          "threshold": 0.3,
+          "tp": 55,
+          "fp": 4,
+          "fn": 802,
+          "tn": 469
+        },
+        "gatv2": {
+          "accuracy": 0.5669172932330827,
+          "precision": 0.9606557377049181,
+          "recall": 0.3418903150525088,
+          "f1": 0.5043029259896731,
+          "fpr": 0.02536997885835095,
+          "roc_auc": 0.5519943951194121,
+          "auprc": 0.7642585899450787,
+          "ece": 0.42638748136149457,
+          "threshold": 0.5,
+          "tp": 293,
+          "fp": 12,
+          "fn": 564,
+          "tn": 461
+        },
+        "pi_gnn": {
+          "accuracy": 0.3556390977443609,
+          "precision": 0.5,
+          "recall": 0.045507584597432905,
+          "f1": 0.08342245989304814,
+          "fpr": 0.0824524312896406,
+          "roc_auc": 0.32424924943445477,
+          "auprc": 0.5595379410787634,
+          "ece": 0.6245431749124335,
+          "threshold": 0.05000000074505806,
+          "tp": 39,
+          "fp": 39,
+          "fn": 818,
+          "tn": 434
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed77/baseline_eval.json"
+    },
+    {
+      "seed": 88,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.3473684210526316,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.023255813953488372,
+          "roc_auc": 0.8291979248126978,
+          "auprc": 0.7937143451875177,
+          "ece": 0.5556842105263159,
+          "threshold": 0.5,
+          "tp": 0,
+          "fp": 11,
+          "fn": 857,
+          "tn": 462
+        },
+        "gcn": {
+          "accuracy": 0.5661654135338345,
+          "precision": 0.9605263157894737,
+          "recall": 0.34072345390898484,
+          "f1": 0.5030146425495262,
+          "fpr": 0.02536997885835095,
+          "roc_auc": 0.8372290378206093,
+          "auprc": 0.8957703447145816,
+          "ece": 0.42475010621237547,
+          "threshold": 0.2,
+          "tp": 292,
+          "fp": 12,
+          "fn": 565,
+          "tn": 461
+        },
+        "graphsage": {
+          "accuracy": 0.3849624060150376,
+          "precision": 0.782608695652174,
+          "recall": 0.06301050175029171,
+          "f1": 0.11663066954643629,
+          "fpr": 0.03171247357293869,
+          "roc_auc": 0.35485406834895317,
+          "auprc": 0.5692636960081967,
+          "ece": 0.6045474847296292,
+          "threshold": 0.3,
+          "tp": 54,
+          "fp": 15,
+          "fn": 803,
+          "tn": 458
+        },
+        "gatv2": {
+          "accuracy": 0.5631578947368421,
+          "precision": 0.948051948051948,
+          "recall": 0.34072345390898484,
+          "f1": 0.5012875536480688,
+          "fpr": 0.03382663847780127,
+          "roc_auc": 0.6894915889787128,
+          "auprc": 0.8183661784085792,
+          "ece": 0.4269168660789553,
+          "threshold": 0.15,
+          "tp": 292,
+          "fp": 16,
+          "fn": 565,
+          "tn": 457
+        },
+        "pi_gnn": {
+          "accuracy": 0.3330827067669173,
+          "precision": 0.35294117647058826,
+          "recall": 0.042007001166861145,
+          "f1": 0.07507820646506778,
+          "fpr": 0.13953488372093023,
+          "roc_auc": 0.2750659288880775,
+          "auprc": 0.5348761404374629,
+          "ece": 0.6309691966415025,
+          "threshold": 0.05000000074505806,
+          "tp": 36,
+          "fp": 66,
+          "fn": 821,
+          "tn": 407
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed88/baseline_eval.json"
+    },
+    {
+      "seed": 99,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.3473684210526316,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "fpr": 0.023255813953488372,
+          "roc_auc": 0.8246069552818351,
+          "auprc": 0.7847987398683793,
+          "ece": 0.5614135338345866,
+          "threshold": 0.5,
+          "tp": 0,
+          "fp": 11,
+          "fn": 857,
+          "tn": 462
+        },
+        "gcn": {
+          "accuracy": 0.5661654135338345,
+          "precision": 0.9666666666666667,
+          "recall": 0.338389731621937,
+          "f1": 0.5012964563526361,
+          "fpr": 0.021141649048625793,
+          "roc_auc": 0.8470474465969838,
+          "auprc": 0.9012928828744059,
+          "ece": 0.418293503118276,
+          "threshold": 0.35,
+          "tp": 290,
+          "fp": 10,
+          "fn": 567,
+          "tn": 463
+        },
+        "graphsage": {
+          "accuracy": 0.3902255639097744,
+          "precision": 0.9107142857142857,
+          "recall": 0.059509918319719954,
+          "f1": 0.1117196056955093,
+          "fpr": 0.010570824524312896,
+          "roc_auc": 0.2787922370430308,
+          "auprc": 0.5473752426327418,
+          "ece": 0.604654830513005,
+          "threshold": 0.5,
+          "tp": 51,
+          "fp": 5,
+          "fn": 806,
+          "tn": 468
+        },
+        "gatv2": {
+          "accuracy": 0.5684210526315789,
+          "precision": 0.9700996677740864,
+          "recall": 0.34072345390898484,
+          "f1": 0.5043177892918825,
+          "fpr": 0.019027484143763214,
+          "roc_auc": 0.6484960319320309,
+          "auprc": 0.8018115673459671,
+          "ece": 0.42837331610262613,
+          "threshold": 0.25,
+          "tp": 292,
+          "fp": 9,
+          "fn": 565,
+          "tn": 464
+        },
+        "pi_gnn": {
+          "accuracy": 0.324812030075188,
+          "precision": 0.3217391304347826,
+          "recall": 0.043173862310385065,
+          "f1": 0.07613168724279835,
+          "fpr": 0.1649048625792812,
+          "roc_auc": 0.3466959080917996,
+          "auprc": 0.5520601620741008,
+          "ece": 0.6274351706646061,
+          "threshold": 0.05000000074505806,
+          "tp": 37,
+          "fp": 78,
+          "fn": 820,
+          "tn": 395
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed99/baseline_eval.json"
+    }
+  ],
+  "stage3_stats": {
+    "data_only": {
+      "f1": {
+        "n": 9,
+        "mean": 0.3122866213359145,
+        "std": 0.04310883924783037
+      },
+      "recall": {
+        "n": 9,
+        "mean": 0.1887722027745365,
+        "std": 0.03036518080255906
+      },
+      "fpr": {
+        "n": 9,
+        "mean": 0.029833215879727506,
+        "std": 0.004415068388351539
+      }
+    },
+    "physics_stable": {
+      "f1": {
+        "n": 9,
+        "mean": 0.08990689240895502,
+        "std": 0.10195668944424158
+      },
+      "recall": {
+        "n": 9,
+        "mean": 0.05250875145857643,
+        "std": 0.06453174670734874
+      },
+      "fpr": {
+        "n": 9,
+        "mean": 0.12614517265680056,
+        "std": 0.05702369538799652
+      }
+    }
+  },
+  "baseline_stats": {
+    "random_forest": {
+      "f1": {
+        "n": 9,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "recall": {
+        "n": 9,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "fpr": {
+        "n": 9,
+        "mean": 0.026074700493305143,
+        "std": 0.002114164904862579
+      }
+    },
+    "gcn": {
+      "f1": {
+        "n": 9,
+        "mean": 0.5029668147210489,
+        "std": 0.002712980257184989
+      },
+      "recall": {
+        "n": 9,
+        "mean": 0.33981589524179956,
+        "std": 0.003019092706390517
+      },
+      "fpr": {
+        "n": 9,
+        "mean": 0.020671834625323,
+        "std": 0.004933051444679351
+      }
+    },
+    "graphsage": {
+      "f1": {
+        "n": 9,
+        "mean": 0.11742353039829101,
+        "std": 0.021194468231287924
+      },
+      "recall": {
+        "n": 9,
+        "mean": 0.06301050175029171,
+        "std": 0.012431316075065644
+      },
+      "fpr": {
+        "n": 9,
+        "mean": 0.014094432699083862,
+        "std": 0.008587778440418562
+      }
+    },
+    "gatv2": {
+      "f1": {
+        "n": 9,
+        "mean": 0.5039197378447986,
+        "std": 0.003160031835760205
+      },
+      "recall": {
+        "n": 9,
+        "mean": 0.3415013613380008,
+        "std": 0.002609180837222623
+      },
+      "fpr": {
+        "n": 9,
+        "mean": 0.025135071646699553,
+        "std": 0.005927626441599973
+      }
+    },
+    "pi_gnn": {
+      "f1": {
+        "n": 9,
+        "mean": 0.08990689240895502,
+        "std": 0.10195668944424158
+      },
+      "recall": {
+        "n": 9,
+        "mean": 0.05250875145857643,
+        "std": 0.06453174670734874
+      },
+      "fpr": {
+        "n": 9,
+        "mean": 0.12614517265680056,
+        "std": 0.05702369538799652
+      }
+    }
+  },
+  "p_values": {
+    "physics_vs_data_only_f1": 0.005847953216374269,
+    "graphsage_vs_gcn_f1": 0.005847953216374269,
+    "gatv2_vs_gcn_f1": 0.38011695906432746,
+    "best_nonphysics_vs_data_only_f1": 0.005847953216374269
+  },
+  "best_nonphysics_baseline": "gatv2"
+}

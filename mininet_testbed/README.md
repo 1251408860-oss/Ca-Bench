@@ -6,6 +6,8 @@ This module implements the Mininet-based scenario generation component of Ca-Ben
 
 The generated traffic traces serve as the primary data source for graph construction and downstream model evaluation.
 
+The repository already bundles the five paper captures under `real_collection/scenario_*/full_arena_v2.pcap`, so rerunning this module is optional for reviewers who only need offline reproduction.
+
 ## Environment and Dependency Preparation
 
 Execution is intended for Ubuntu/Linux with Mininet installed and runnable via `sudo`. A Python environment is also required for the auxiliary traffic-generation scripts invoked by the topology runner.
@@ -37,7 +39,7 @@ This module must be executed in a real Mininet-capable environment. It is not a 
 
 ## Execution Entry
 
-Generate the five paper scenarios and corresponding packet captures:
+Regenerate the five paper scenarios and corresponding packet captures:
 
 ```bash
 sudo -E bash run_capture_batch2.sh
@@ -48,3 +50,5 @@ sudo -E bash run_capture_batch2.sh
 - Scenario manifests: `real_collection/scenario_*/arena_manifest_v2.json`
 - Packet captures: `real_collection/scenario_*/full_arena_v2.pcap`
 - Mininet logs: `real_collection/scenario_*/mininet.log`
+
+For most artifact evaluation workflows, reviewers can skip this regeneration step and directly use the bundled captures already present in `real_collection/`.

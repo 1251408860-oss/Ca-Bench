@@ -1,0 +1,1101 @@
+{
+  "config": {
+    "project_dir": "/home/user/FedSTGCN",
+    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
+    "real_collection_dir": "/home/user/FedSTGCN/real_collection",
+    "output_dir": "/home/user/FedSTGCN/submission_runs/phase6_wasa_edge",
+    "scenario": "scenario_h_mimic_heavy_overlap",
+    "seeds": "11,22,33",
+    "aggregators": "fedavg,median",
+    "rounds_list": "1,2,4",
+    "num_clients_list": "3,5",
+    "local_epochs": 2,
+    "skip_existing": true
+  },
+  "rows": [
+    {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8246808510638298,
+      "recall": 0.924618320610687,
+      "fpr": 0.7416481069042317
+    },
+    {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.6246719160104987,
+      "recall": 0.4541984732824427,
+      "fpr": 0.0
+    },
+    {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.7898383371824481,
+      "recall": 0.6526717557251909,
+      "fpr": 0.0
+    },
+    {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "median",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8312686885946176,
+      "recall": 0.9284351145038168,
+      "fpr": 0.7126948775055679
+    },
+    {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "median",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.6291693917593197,
+      "recall": 0.45896946564885494,
+      "fpr": 0.0
+    },
+    {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "median",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.7919308357348703,
+      "recall": 0.6555343511450382,
+      "fpr": 0.0
+    },
+    {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8931645569620253,
+      "recall": 0.8416030534351145,
+      "fpr": 0.10022271714922049
+    },
+    {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.8260629486471563,
+      "recall": 0.7137404580152672,
+      "fpr": 0.0334075723830735
+    },
+    {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.8276631344116006,
+      "recall": 0.7080152671755725,
+      "fpr": 0.0066815144766146995
+    },
+    {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "median",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8893401015228426,
+      "recall": 0.8358778625954199,
+      "fpr": 0.10244988864142539
+    },
+    {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "median",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.8211920529801324,
+      "recall": 0.7099236641221374,
+      "fpr": 0.044543429844097995
+    },
+    {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "median",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.8265476854433911,
+      "recall": 0.7070610687022901,
+      "fpr": 0.008908685968819599
+    },
+    {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.9575518262586377,
+      "recall": 0.9255725190839694,
+      "fpr": 0.017817371937639197
+    },
+    {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.9591334318069917,
+      "recall": 0.9293893129770993,
+      "fpr": 0.0200445434298441
+    },
+    {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.9369641956631366,
+      "recall": 0.8864503816793893,
+      "fpr": 0.013363028953229399
+    },
+    {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "median",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.957037037037037,
+      "recall": 0.924618320610687,
+      "fpr": 0.017817371937639197
+    },
+    {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "median",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.95770539620807,
+      "recall": 0.9398854961832062,
+      "fpr": 0.053452115812917596
+    },
+    {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "median",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.9491525423728814,
+      "recall": 0.9083969465648855,
+      "fpr": 0.013363028953229399
+    },
+    {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8249683677773091,
+      "recall": 0.933206106870229,
+      "fpr": 0.7683741648106904
+    },
+    {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.6264744429882044,
+      "recall": 0.45610687022900764,
+      "fpr": 0.0
+    },
+    {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.7928653624856157,
+      "recall": 0.6574427480916031,
+      "fpr": 0.0022271714922048997
+    },
+    {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "median",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8328370905997449,
+      "recall": 0.9341603053435115,
+      "fpr": 0.7216035634743875
+    },
+    {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "median",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.6255737704918033,
+      "recall": 0.4551526717557252,
+      "fpr": 0.0
+    },
+    {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "median",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.7928653624856157,
+      "recall": 0.6574427480916031,
+      "fpr": 0.0022271714922048997
+    },
+    {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8866293848500255,
+      "recall": 0.8320610687022901,
+      "fpr": 0.10467706013363029
+    },
+    {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.823464305478694,
+      "recall": 0.7099236641221374,
+      "fpr": 0.0334075723830735
+    },
+    {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.8251670378619154,
+      "recall": 0.7070610687022901,
+      "fpr": 0.015590200445434299
+    },
+    {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "median",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.8878741755454085,
+      "recall": 0.8349236641221374,
+      "fpr": 0.10690423162583519
+    },
+    {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "median",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.8251516822945395,
+      "recall": 0.7137404580152672,
+      "fpr": 0.0378619153674833
+    },
+    {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "median",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.8256267409470753,
+      "recall": 0.7070610687022901,
+      "fpr": 0.013363028953229399
+    },
+    {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.9580661075481006,
+      "recall": 0.9265267175572519,
+      "fpr": 0.017817371937639197
+    },
+    {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.9560493827160493,
+      "recall": 0.9236641221374046,
+      "fpr": 0.0200445434298441
+    },
+    {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.9250382457929628,
+      "recall": 0.8654580152671756,
+      "fpr": 0.013363028953229399
+    },
+    {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "median",
+      "seed": 11,
+      "duration_sec": 0.0,
+      "f1": 0.957037037037037,
+      "recall": 0.924618320610687,
+      "fpr": 0.017817371937639197
+    },
+    {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "median",
+      "seed": 22,
+      "duration_sec": 0.0,
+      "f1": 0.9561360275998028,
+      "recall": 0.9255725190839694,
+      "fpr": 0.024498886414253896
+    },
+    {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "median",
+      "seed": 33,
+      "duration_sec": 0.0,
+      "f1": 0.9342770475227502,
+      "recall": 0.8816793893129771,
+      "fpr": 0.013363028953229399
+    }
+  ],
+  "setting_stats": {
+    "c3_r1_fedavg": {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "f1": {
+        "n": 3,
+        "mean": 0.7463970347522588,
+        "std": 0.1068468698320886
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.6771628498727735,
+        "std": 0.23616428277682358
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.2472160356347439,
+        "std": 0.4281907341651345
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 1034,
+            "benign": 323,
+            "attack": 711
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 1073,
+            "benign": 351,
+            "attack": 722
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 993,
+            "benign": 276,
+            "attack": 717
+          }
+        ],
+        "train_size_cv": 0.03871370946742779,
+        "attack_ratio_std": 0.025235911690837595
+      }
+    },
+    "c3_r1_median": {
+      "num_clients": 3,
+      "rounds": 1,
+      "aggregation": "median",
+      "f1": {
+        "n": 3,
+        "mean": 0.7507896386962692,
+        "std": 0.10714700189766023
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.6809796437659033,
+        "std": 0.23576491692175847
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.23756495916852263,
+        "std": 0.411474579377907
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 1034,
+            "benign": 323,
+            "attack": 711
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 1073,
+            "benign": 351,
+            "attack": 722
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 993,
+            "benign": 276,
+            "attack": 717
+          }
+        ],
+        "train_size_cv": 0.03871370946742779,
+        "attack_ratio_std": 0.025235911690837595
+      }
+    },
+    "c3_r2_fedavg": {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "f1": {
+        "n": 3,
+        "mean": 0.8489635466735941,
+        "std": 0.038287558442772075
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.7544529262086515,
+        "std": 0.07552849104297837
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.0467706013363029,
+        "std": 0.04818108608637847
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 1034,
+            "benign": 323,
+            "attack": 711
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 1073,
+            "benign": 351,
+            "attack": 722
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 993,
+            "benign": 276,
+            "attack": 717
+          }
+        ],
+        "train_size_cv": 0.03871370946742779,
+        "attack_ratio_std": 0.025235911690837595
+      }
+    },
+    "c3_r2_median": {
+      "num_clients": 3,
+      "rounds": 2,
+      "aggregation": "median",
+      "f1": {
+        "n": 3,
+        "mean": 0.8456932799821221,
+        "std": 0.03789398992882656
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.7509541984732825,
+        "std": 0.07355997661148105
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.05196733481811433,
+        "std": 0.04721043235511402
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 1034,
+            "benign": 323,
+            "attack": 711
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 1073,
+            "benign": 351,
+            "attack": 722
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 993,
+            "benign": 276,
+            "attack": 717
+          }
+        ],
+        "train_size_cv": 0.03871370946742779,
+        "attack_ratio_std": 0.025235911690837595
+      }
+    },
+    "c3_r4_fedavg": {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "f1": {
+        "n": 3,
+        "mean": 0.9512164845762553,
+        "std": 0.012368151578748597
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.9138040712468193,
+        "std": 0.023765736441759104
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.017074981440237565,
+        "std": 0.0034020606495589016
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 1034,
+            "benign": 323,
+            "attack": 711
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 1073,
+            "benign": 351,
+            "attack": 722
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 993,
+            "benign": 276,
+            "attack": 717
+          }
+        ],
+        "train_size_cv": 0.03871370946742779,
+        "attack_ratio_std": 0.025235911690837595
+      }
+    },
+    "c3_r4_median": {
+      "num_clients": 3,
+      "rounds": 4,
+      "aggregation": "median",
+      "f1": {
+        "n": 3,
+        "mean": 0.9546316585393295,
+        "std": 0.004756806856437488
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.9243002544529262,
+        "std": 0.01574668421690407
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.028210838901262063,
+        "std": 0.02197275217067371
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 1034,
+            "benign": 323,
+            "attack": 711
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 1073,
+            "benign": 351,
+            "attack": 722
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 993,
+            "benign": 276,
+            "attack": 717
+          }
+        ],
+        "train_size_cv": 0.03871370946742779,
+        "attack_ratio_std": 0.025235911690837595
+      }
+    },
+    "c5_r1_fedavg": {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "fedavg",
+      "f1": {
+        "n": 3,
+        "mean": 0.7481027244170431,
+        "std": 0.10654918990630198
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.6822519083969466,
+        "std": 0.23951522128499725
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.25686711210096513,
+        "std": 0.44297950155967286
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 611,
+            "benign": 184,
+            "attack": 427
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 629,
+            "benign": 192,
+            "attack": 437
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 626,
+            "benign": 184,
+            "attack": 442
+          },
+          {
+            "client_id": 3,
+            "train_nodes": 633,
+            "benign": 207,
+            "attack": 426
+          },
+          {
+            "client_id": 4,
+            "train_nodes": 601,
+            "benign": 183,
+            "attack": 418
+          }
+        ],
+        "train_size_cv": 0.021759254134245228,
+        "attack_ratio_std": 0.012379675709411236
+      }
+    },
+    "c5_r1_median": {
+      "num_clients": 5,
+      "rounds": 1,
+      "aggregation": "median",
+      "f1": {
+        "n": 3,
+        "mean": 0.7504254078590546,
+        "std": 0.10995627893426635
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.6822519083969466,
+        "std": 0.24046558815168315
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.24127691165553078,
+        "std": 0.41597657314907627
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 611,
+            "benign": 184,
+            "attack": 427
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 629,
+            "benign": 192,
+            "attack": 437
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 626,
+            "benign": 184,
+            "attack": 442
+          },
+          {
+            "client_id": 3,
+            "train_nodes": 633,
+            "benign": 207,
+            "attack": 426
+          },
+          {
+            "client_id": 4,
+            "train_nodes": 601,
+            "benign": 183,
+            "attack": 418
+          }
+        ],
+        "train_size_cv": 0.021759254134245228,
+        "attack_ratio_std": 0.012379675709411236
+      }
+    },
+    "c5_r2_fedavg": {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "fedavg",
+      "f1": {
+        "n": 3,
+        "mean": 0.8450869093968782,
+        "std": 0.035986911154942465
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.7496819338422392,
+        "std": 0.07135677969437995
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.051224944320712694,
+        "std": 0.04714033516373435
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 611,
+            "benign": 184,
+            "attack": 427
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 629,
+            "benign": 192,
+            "attack": 437
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 626,
+            "benign": 184,
+            "attack": 442
+          },
+          {
+            "client_id": 3,
+            "train_nodes": 633,
+            "benign": 207,
+            "attack": 426
+          },
+          {
+            "client_id": 4,
+            "train_nodes": 601,
+            "benign": 183,
+            "attack": 418
+          }
+        ],
+        "train_size_cv": 0.021759254134245228,
+        "attack_ratio_std": 0.012379675709411236
+      }
+    },
+    "c5_r2_median": {
+      "num_clients": 5,
+      "rounds": 2,
+      "aggregation": "median",
+      "f1": {
+        "n": 3,
+        "mean": 0.8462175329290078,
+        "std": 0.03607649270277997
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.7519083969465649,
+        "std": 0.0719708586760804
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.05270972531551596,
+        "std": 0.04850600214972423
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 611,
+            "benign": 184,
+            "attack": 427
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 629,
+            "benign": 192,
+            "attack": 437
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 626,
+            "benign": 184,
+            "attack": 442
+          },
+          {
+            "client_id": 3,
+            "train_nodes": 633,
+            "benign": 207,
+            "attack": 426
+          },
+          {
+            "client_id": 4,
+            "train_nodes": 601,
+            "benign": 183,
+            "attack": 418
+          }
+        ],
+        "train_size_cv": 0.021759254134245228,
+        "attack_ratio_std": 0.012379675709411236
+      }
+    },
+    "c5_r4_fedavg": {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "fedavg",
+      "f1": {
+        "n": 3,
+        "mean": 0.9463845786857042,
+        "std": 0.018513947194962372
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.9052162849872774,
+        "std": 0.0344614077119131
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.017074981440237565,
+        "std": 0.0034020606495589016
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 611,
+            "benign": 184,
+            "attack": 427
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 629,
+            "benign": 192,
+            "attack": 437
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 626,
+            "benign": 184,
+            "attack": 442
+          },
+          {
+            "client_id": 3,
+            "train_nodes": 633,
+            "benign": 207,
+            "attack": 426
+          },
+          {
+            "client_id": 4,
+            "train_nodes": 601,
+            "benign": 183,
+            "attack": 418
+          }
+        ],
+        "train_size_cv": 0.021759254134245228,
+        "attack_ratio_std": 0.012379675709411236
+      }
+    },
+    "c5_r4_median": {
+      "num_clients": 5,
+      "rounds": 4,
+      "aggregation": "median",
+      "f1": {
+        "n": 3,
+        "mean": 0.94915003738653,
+        "std": 0.012888263076053678
+      },
+      "recall": {
+        "n": 3,
+        "mean": 0.9106234096692112,
+        "std": 0.025070796945214458
+      },
+      "fpr": {
+        "n": 3,
+        "mean": 0.01855976243504083,
+        "std": 0.00560492534170063
+      },
+      "duration_sec": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "partition": {
+        "clients": [
+          {
+            "client_id": 0,
+            "train_nodes": 611,
+            "benign": 184,
+            "attack": 427
+          },
+          {
+            "client_id": 1,
+            "train_nodes": 629,
+            "benign": 192,
+            "attack": 437
+          },
+          {
+            "client_id": 2,
+            "train_nodes": 626,
+            "benign": 184,
+            "attack": 442
+          },
+          {
+            "client_id": 3,
+            "train_nodes": 633,
+            "benign": 207,
+            "attack": 426
+          },
+          {
+            "client_id": 4,
+            "train_nodes": 601,
+            "benign": 183,
+            "attack": 418
+          }
+        ],
+        "train_size_cv": 0.021759254134245228,
+        "attack_ratio_std": 0.012379675709411236
+      }
+    }
+  },
+  "partition_audit": {
+    "3": {
+      "clients": [
+        {
+          "client_id": 0,
+          "train_nodes": 1034,
+          "benign": 323,
+          "attack": 711
+        },
+        {
+          "client_id": 1,
+          "train_nodes": 1073,
+          "benign": 351,
+          "attack": 722
+        },
+        {
+          "client_id": 2,
+          "train_nodes": 993,
+          "benign": 276,
+          "attack": 717
+        }
+      ],
+      "train_size_cv": 0.03871370946742779,
+      "attack_ratio_std": 0.025235911690837595
+    },
+    "5": {
+      "clients": [
+        {
+          "client_id": 0,
+          "train_nodes": 611,
+          "benign": 184,
+          "attack": 427
+        },
+        {
+          "client_id": 1,
+          "train_nodes": 629,
+          "benign": 192,
+          "attack": 437
+        },
+        {
+          "client_id": 2,
+          "train_nodes": 626,
+          "benign": 184,
+          "attack": 442
+        },
+        {
+          "client_id": 3,
+          "train_nodes": 633,
+          "benign": 207,
+          "attack": 426
+        },
+        {
+          "client_id": 4,
+          "train_nodes": 601,
+          "benign": 183,
+          "attack": 418
+        }
+      ],
+      "train_size_cv": 0.021759254134245228,
+      "attack_ratio_std": 0.012379675709411236
+    }
+  }
+}

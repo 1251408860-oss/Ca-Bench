@@ -4,12 +4,4 @@ __pycache__/
 *.pt
 *.pth
 
-paper_artifacts/runs/
-paper_artifacts/figures/
-paper_artifacts/tables/
-paper_artifacts/smoke/
-
-mininet_testbed/real_collection/*/full_arena_v2.pcap
-mininet_testbed/real_collection/*/mininet.log
-
 mininet_testbed/llm_payloads.json

@@ -1,0 +1,23 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 \
+    python3-pip \
+    python3-venv \
+    build-essential \
+    git \
+    libgl1 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace/FedSTGCN
+
+COPY repro/requirements-lock-dl.txt /tmp/requirements-lock-dl.txt
+COPY repro/requirements-lock-plot.txt /tmp/requirements-lock-plot.txt
+
+RUN python3 -m pip install --upgrade pip && \
+    pip install -r /tmp/requirements-lock-dl.txt && \
+    pip install -r /tmp/requirements-lock-plot.txt
+
+CMD ["bash"]

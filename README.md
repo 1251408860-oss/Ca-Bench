@@ -15,9 +15,13 @@ To facilitate reproducibility and provide a clear review path, the package is or
 
 The artifact package is designed for Ubuntu/Linux workflows. The online scenario generation module requires a Mininet-enabled environment with root privileges, while the offline benchmark module requires a Python environment with the project dependencies installed.
 
-Packet captures (`full_arena_v2.pcap`) are generated locally by the Mininet module and are therefore not tracked in the repository.
+For offline reproduction, the five paper scenario captures are bundled under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`. Reviewers may reproduce the paper tables and figures directly from these captures without rerunning Mininet.
+
+Mininet regeneration remains available as an optional end-to-end validation path for reviewers who want to reproduce the online data-collection stage itself.
 
 An example Conda environment file is provided as [`environment.yml`](./environment.yml). Reviewers may use it as a starting point for the Python runtime setup.
+
+Locked evaluation environment files are also provided under [`repro`](./repro).
 
 ## Quick Installation
 
@@ -35,7 +39,7 @@ sudo apt-get update
 sudo apt-get install -y mininet openvswitch-switch tcpdump
 ```
 
-The Mininet scenario-generation script also requires a valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` in the shell environment.
+The Mininet scenario-generation script requires a valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` only when reviewers choose to regenerate packet captures from scratch.
 
 ### Offline benchmark dependencies
 
@@ -59,8 +63,14 @@ The Mininet scenario-generation script also requires a valid `LLM_API_KEY` or `D
 - `requests`
 - A valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` for the default scenario-generation script
 
-### Special Mininet environment requirement
+### Offline-first reproduction path
 
-The benchmark does not start from a downloadable dataset. Reviewers must first run the Mininet module in a Mininet-capable Ubuntu/Linux environment to generate the five packet captures under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`, and only then run the offline benchmark pipeline.
+The repository already ships the five packet captures used by the paper under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`. Reviewers can therefore start directly from the offline benchmark pipeline.
+
+For paper table and figure regeneration, the repository also includes the precomputed run summaries consumed by `core_experiments/make_paper_tables_figs.py` under `paper_artifacts/runs/`.
+
+### Optional Mininet regeneration path
+
+Reviewers who wish to reproduce the traffic-generation stage itself may rerun the Mininet module in a Mininet-capable Ubuntu/Linux environment. That optional path regenerates the same five packet captures under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`.
 
 Detailed execution commands, expected inputs, and output locations are documented in the `README.md` file of each submodule.

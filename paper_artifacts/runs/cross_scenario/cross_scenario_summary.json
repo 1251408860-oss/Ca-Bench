@@ -1,0 +1,1504 @@
+{
+  "config": {
+    "project_dir": "/home/user/FedSTGCN",
+    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
+    "real_collection_dir": "/home/user/FedSTGCN/real_collection",
+    "output_dir": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid",
+    "train_scenarios": "scenario_d_three_tier_low2,scenario_e_three_tier_high2,scenario_f_two_tier_high2",
+    "val_scenarios": "scenario_g_mimic_congest",
+    "test_scenarios": "scenario_h_mimic_heavy_overlap",
+    "seeds": "11,22,33,44,55",
+    "epochs": 120,
+    "skip_existing": false,
+    "hard_overlap": true,
+    "train_keep_frac": 0.8,
+    "val_keep_frac": 0.85,
+    "test_keep_frac": 0.7,
+    "min_keep_per_class": 64,
+    "overlap_features": "ln(N+1),ln(T+1),entropy,pkt_rate,avg_pkt_size,port_diversity"
+  },
+  "merged_graph": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/graphs/cross_scenario_merged.pt",
+  "eval_graph": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/graphs/cross_scenario_eval.pt",
+  "train_scenarios": [
+    "scenario_d_three_tier_low2",
+    "scenario_e_three_tier_high2",
+    "scenario_f_two_tier_high2"
+  ],
+  "val_scenarios": [
+    "scenario_g_mimic_congest"
+  ],
+  "test_scenarios": [
+    "scenario_h_mimic_heavy_overlap"
+  ],
+  "graph_audit": {
+    "scenario_d_three_tier_low2": {
+      "nodes": 4595,
+      "benign": 698,
+      "attack": 3897,
+      "has_both_classes": true,
+      "attack_only": false,
+      "benign_only": false,
+      "scenario": "scenario_d_three_tier_low2",
+      "split": "train"
+    },
+    "scenario_e_three_tier_high2": {
+      "nodes": 5975,
+      "benign": 2137,
+      "attack": 3838,
+      "has_both_classes": true,
+      "attack_only": false,
+      "benign_only": false,
+      "scenario": "scenario_e_three_tier_high2",
+      "split": "train"
+    },
+    "scenario_f_two_tier_high2": {
+      "nodes": 4793,
+      "benign": 1996,
+      "attack": 2797,
+      "has_both_classes": true,
+      "attack_only": false,
+      "benign_only": false,
+      "scenario": "scenario_f_two_tier_high2",
+      "split": "train"
+    },
+    "scenario_g_mimic_congest": {
+      "nodes": 1406,
+      "benign": 870,
+      "attack": 536,
+      "has_both_classes": true,
+      "attack_only": false,
+      "benign_only": false,
+      "scenario": "scenario_g_mimic_congest",
+      "split": "val"
+    },
+    "scenario_h_mimic_heavy_overlap": {
+      "nodes": 6984,
+      "benign": 2123,
+      "attack": 4861,
+      "has_both_classes": true,
+      "attack_only": false,
+      "benign_only": false,
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "split": "test"
+    }
+  },
+  "eval_split_audit": {
+    "scenario_d_three_tier_low2": {
+      "train": {
+        "nodes": 3810,
+        "benign": 591,
+        "attack": 3219,
+        "has_both_classes": true,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "val": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "test": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      }
+    },
+    "scenario_e_three_tier_high2": {
+      "train": {
+        "nodes": 4808,
+        "benign": 1689,
+        "attack": 3119,
+        "has_both_classes": true,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "val": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "test": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      }
+    },
+    "scenario_f_two_tier_high2": {
+      "train": {
+        "nodes": 3673,
+        "benign": 1585,
+        "attack": 2088,
+        "has_both_classes": true,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "val": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "test": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      }
+    },
+    "scenario_g_mimic_congest": {
+      "train": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "val": {
+        "nodes": 1196,
+        "benign": 740,
+        "attack": 456,
+        "has_both_classes": true,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "test": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      }
+    },
+    "scenario_h_mimic_heavy_overlap": {
+      "train": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "val": {
+        "nodes": 0,
+        "benign": 0,
+        "attack": 0,
+        "has_both_classes": false,
+        "attack_only": false,
+        "benign_only": false
+      },
+      "test": {
+        "nodes": 4889,
+        "benign": 1486,
+        "attack": 3403,
+        "has_both_classes": true,
+        "attack_only": false,
+        "benign_only": false
+      }
+    }
+  },
+  "paper_test_scenarios": [
+    "scenario_h_mimic_heavy_overlap"
+  ],
+  "attack_only_test_scenarios": [],
+  "benign_only_test_scenarios": [],
+  "rows_data_only": [
+    {
+      "seed": 11,
+      "metrics": {
+        "accuracy": 0.6999386377582327,
+        "precision": 1.0,
+        "recall": 0.568909785483397,
+        "f1": 0.7252294437160516,
+        "tp": 1936,
+        "fp": 0,
+        "fn": 1467,
+        "tn": 1486,
+        "threshold": 0.8999999761581421,
+        "auroc": 0.9760102023825861,
+        "auprc": 0.9906095259597268,
+        "ece": 0.27837979793548584,
+        "fpr": 0.0
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed11/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed11/pi_gnn_model.pt",
+      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed11/predictions.json"
+    },
+    {
+      "seed": 22,
+      "metrics": {
+        "accuracy": 0.7040294538760483,
+        "precision": 0.9984709480122325,
+        "recall": 0.5756685277696151,
+        "f1": 0.7302889095992545,
+        "tp": 1959,
+        "fp": 3,
+        "fn": 1444,
+        "tn": 1483,
+        "threshold": 0.699999988079071,
+        "auroc": 0.930440107276099,
+        "auprc": 0.9707205453847396,
+        "ece": 0.18340539932250977,
+        "fpr": 0.002018842530282638
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed22/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed22/pi_gnn_model.pt",
+      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed22/predictions.json"
+    },
+    {
+      "seed": 33,
+      "metrics": {
+        "accuracy": 0.7107793004704439,
+        "precision": 1.0,
+        "recall": 0.5844842785777256,
+        "f1": 0.737759643916914,
+        "tp": 1989,
+        "fp": 0,
+        "fn": 1414,
+        "tn": 1486,
+        "threshold": 0.75,
+        "auroc": 0.8572892495695944,
+        "auprc": 0.940298629796784,
+        "ece": 0.16854646801948547,
+        "fpr": 0.0
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed33/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed33/pi_gnn_model.pt",
+      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed33/predictions.json"
+    },
+    {
+      "seed": 44,
+      "metrics": {
+        "accuracy": 0.7087338924115361,
+        "precision": 1.0,
+        "recall": 0.5815456949750221,
+        "f1": 0.7354143441099963,
+        "tp": 1979,
+        "fp": 0,
+        "fn": 1424,
+        "tn": 1486,
+        "threshold": 0.75,
+        "auroc": 0.897852579605755,
+        "auprc": 0.9547157844067856,
+        "ece": 0.22233183681964874,
+        "fpr": 0.0
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed44/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed44/pi_gnn_model.pt",
+      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed44/predictions.json"
+    },
+    {
+      "seed": 55,
+      "metrics": {
+        "accuracy": 0.7062794027408468,
+        "precision": 1.0,
+        "recall": 0.5780193946517779,
+        "f1": 0.7325884543761639,
+        "tp": 1967,
+        "fp": 0,
+        "fn": 1436,
+        "tn": 1486,
+        "threshold": 0.699999988079071,
+        "auroc": 0.9444103433396785,
+        "auprc": 0.977365619668367,
+        "ece": 0.20482495427131653,
+        "fpr": 0.0
+      },
+      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed55/phase3_results.json",
+      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed55/pi_gnn_model.pt",
+      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed55/predictions.json"
+    }
+  ],
+  "rows_baseline": [
+    {
+      "seed": 11,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.7651871548373901,
+          "precision": 0.9964773227653017,
+          "recall": 0.6650014692918014,
+          "f1": 0.797673598872048,
+          "fpr": 0.005383580080753701,
+          "roc_auc": 0.9487909290709765,
+          "auprc": 0.977920815938417,
+          "ece": 0.18904735119656357,
+          "threshold": 0.44999999999999996,
+          "tp": 2263,
+          "fp": 8,
+          "fn": 1140,
+          "tn": 1478
+        },
+        "gcn": {
+          "accuracy": 0.7664143996727347,
+          "precision": 0.9414291292463881,
+          "recall": 0.7084925066118131,
+          "f1": 0.8085177733065056,
+          "fpr": 0.1009421265141319,
+          "roc_auc": 0.7710388545614688,
+          "auprc": 0.9194423701336208,
+          "ece": 0.2121775205082137,
+          "threshold": 0.15,
+          "tp": 2411,
+          "fp": 150,
+          "fn": 992,
+          "tn": 1336
+        },
+        "graphsage": {
+          "accuracy": 0.7367559828185724,
+          "precision": 0.991635687732342,
+          "recall": 0.6270937408169263,
+          "f1": 0.7683168316831684,
+          "fpr": 0.012113055181695828,
+          "roc_auc": 0.7253742343565905,
+          "auprc": 0.8995441058156326,
+          "ece": 0.3388739120612166,
+          "threshold": 0.3,
+          "tp": 2134,
+          "fp": 18,
+          "fn": 1269,
+          "tn": 1468
+        },
+        "gatv2": {
+          "accuracy": 0.6987113929228881,
+          "precision": 0.9438822447102115,
+          "recall": 0.6029973552747576,
+          "f1": 0.7358795051102744,
+          "fpr": 0.08209959623149395,
+          "roc_auc": 0.6535527594407435,
+          "auprc": 0.8753727128128739,
+          "ece": 0.29957405950033633,
+          "threshold": 0.75,
+          "tp": 2052,
+          "fp": 122,
+          "fn": 1351,
+          "tn": 1364
+        },
+        "pi_gnn": {
+          "accuracy": 0.6999386377582327,
+          "precision": 1.0,
+          "recall": 0.568909785483397,
+          "f1": 0.7252294437160516,
+          "fpr": 0.0,
+          "roc_auc": 0.9760102023825861,
+          "auprc": 0.9906095259597268,
+          "ece": 0.2783798364279298,
+          "threshold": 0.8999999761581421,
+          "tp": 1936,
+          "fp": 0,
+          "fn": 1467,
+          "tn": 1486
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed11/baseline_eval.json"
+    },
+    {
+      "seed": 22,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.7586418490488852,
+          "precision": 0.9991019308486754,
+          "recall": 0.6538348516015281,
+          "f1": 0.7904085257548846,
+          "fpr": 0.0013458950201884253,
+          "roc_auc": 0.9335595343986325,
+          "auprc": 0.9718572659080698,
+          "ece": 0.1893531397013704,
+          "threshold": 0.65,
+          "tp": 2225,
+          "fp": 2,
+          "fn": 1178,
+          "tn": 1484
+        },
+        "gcn": {
+          "accuracy": 0.7572100634076498,
+          "precision": 0.9379446640316206,
+          "recall": 0.6973258889215398,
+          "f1": 0.7999325804820495,
+          "fpr": 0.10565275908479138,
+          "roc_auc": 0.8042602738696637,
+          "auprc": 0.9272331651703615,
+          "ece": 0.24015729434561162,
+          "threshold": 0.15,
+          "tp": 2373,
+          "fp": 157,
+          "fn": 1030,
+          "tn": 1329
+        },
+        "graphsage": {
+          "accuracy": 0.7330742483125383,
+          "precision": 0.9981006647673314,
+          "recall": 0.6176902732882751,
+          "f1": 0.7631149028861862,
+          "fpr": 0.0026917900403768506,
+          "roc_auc": 0.6892098809181512,
+          "auprc": 0.8890947237154877,
+          "ece": 0.26171012808461447,
+          "threshold": 0.7999999999999999,
+          "tp": 2102,
+          "fp": 4,
+          "fn": 1301,
+          "tn": 1482
+        },
+        "gatv2": {
+          "accuracy": 0.7011658825935774,
+          "precision": 0.998972250770812,
+          "recall": 0.5712606523655598,
+          "f1": 0.7268648345485138,
+          "fpr": 0.0013458950201884253,
+          "roc_auc": 0.5968812056814725,
+          "auprc": 0.8548075527279606,
+          "ece": 0.31591748334215963,
+          "threshold": 0.7,
+          "tp": 1944,
+          "fp": 2,
+          "fn": 1459,
+          "tn": 1484
+        },
+        "pi_gnn": {
+          "accuracy": 0.7040294538760483,
+          "precision": 0.9984709480122325,
+          "recall": 0.5756685277696151,
+          "f1": 0.7302889095992545,
+          "fpr": 0.002018842530282638,
+          "roc_auc": 0.930440107276099,
+          "auprc": 0.9707205453847396,
+          "ece": 0.18340536844123237,
+          "threshold": 0.699999988079071,
+          "tp": 1959,
+          "fp": 3,
+          "fn": 1444,
+          "tn": 1483
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed22/baseline_eval.json"
+    },
+    {
+      "seed": 33,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.7615054203313562,
+          "precision": 0.9968902709906708,
+          "recall": 0.6594181604466647,
+          "f1": 0.7937743190661478,
+          "fpr": 0.004710632570659489,
+          "roc_auc": 0.9386020924455462,
+          "auprc": 0.9735765809399346,
+          "ece": 0.1933084475352832,
+          "threshold": 0.44999999999999996,
+          "tp": 2244,
+          "fp": 7,
+          "fn": 1159,
+          "tn": 1479
+        },
+        "gcn": {
+          "accuracy": 0.6976886888934343,
+          "precision": 0.9302637460885114,
+          "recall": 0.6115192477225977,
+          "f1": 0.7379432624113476,
+          "fpr": 0.10497981157469717,
+          "roc_auc": 0.710031604605073,
+          "auprc": 0.892418176582527,
+          "ece": 0.2711673221211041,
+          "threshold": 0.15,
+          "tp": 2081,
+          "fp": 156,
+          "fn": 1322,
+          "tn": 1330
+        },
+        "graphsage": {
+          "accuracy": 0.7253016976886889,
+          "precision": 0.9985479186834463,
+          "recall": 0.6062297972377314,
+          "f1": 0.7544340830133479,
+          "fpr": 0.002018842530282638,
+          "roc_auc": 0.664404458262423,
+          "auprc": 0.8809222903976994,
+          "ece": 0.26592007874851525,
+          "threshold": 0.95,
+          "tp": 2063,
+          "fp": 3,
+          "fn": 1340,
+          "tn": 1483
+        },
+        "gatv2": {
+          "accuracy": 0.6539169564328083,
+          "precision": 1.0,
+          "recall": 0.5027916544225683,
+          "f1": 0.6691435275713727,
+          "fpr": 0.0,
+          "roc_auc": 0.6311393359275661,
+          "auprc": 0.865626052991543,
+          "ece": 0.3330525762587633,
+          "threshold": 0.65,
+          "tp": 1711,
+          "fp": 0,
+          "fn": 1692,
+          "tn": 1486
+        },
+        "pi_gnn": {
+          "accuracy": 0.7107793004704439,
+          "precision": 1.0,
+          "recall": 0.5844842785777256,
+          "f1": 0.737759643916914,
+          "fpr": 0.0,
+          "roc_auc": 0.8572892495695944,
+          "auprc": 0.940298629796784,
+          "ece": 0.16854649243922437,
+          "threshold": 0.75,
+          "tp": 1989,
+          "fp": 0,
+          "fn": 1414,
+          "tn": 1486
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed33/baseline_eval.json"
+    },
+    {
+      "seed": 44,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.7610963387195746,
+          "precision": 0.9964460239893381,
+          "recall": 0.6591243020863944,
+          "f1": 0.7934205871949062,
+          "fpr": 0.005383580080753701,
+          "roc_auc": 0.9327730776699682,
+          "auprc": 0.9716732552993395,
+          "ece": 0.19242125178973196,
+          "threshold": 0.44999999999999996,
+          "tp": 2243,
+          "fp": 8,
+          "fn": 1160,
+          "tn": 1478
+        },
+        "gcn": {
+          "accuracy": 0.7126201677234608,
+          "precision": 0.9882697947214076,
+          "recall": 0.594181604466647,
+          "f1": 0.7421545237658286,
+          "fpr": 0.016150740242261104,
+          "roc_auc": 0.6563976089500635,
+          "auprc": 0.8751232385752451,
+          "ece": 0.2841894055055823,
+          "threshold": 0.2,
+          "tp": 2022,
+          "fp": 24,
+          "fn": 1381,
+          "tn": 1462
+        },
+        "graphsage": {
+          "accuracy": 0.7308242994477399,
+          "precision": 0.9995213020584012,
+          "recall": 0.6135762562444902,
+          "f1": 0.7603787327021122,
+          "fpr": 0.0006729475100942127,
+          "roc_auc": 0.6536944482127044,
+          "auprc": 0.8767365791655806,
+          "ece": 0.2678541970683765,
+          "threshold": 0.5,
+          "tp": 2088,
+          "fp": 1,
+          "fn": 1315,
+          "tn": 1485
+        },
+        "gatv2": {
+          "accuracy": 0.68337083248108,
+          "precision": 1.0,
+          "recall": 0.5451072583014986,
+          "f1": 0.705591479650057,
+          "fpr": 0.0,
+          "roc_auc": 0.6283155469265698,
+          "auprc": 0.8656048498074163,
+          "ece": 0.3494274502006331,
+          "threshold": 0.65,
+          "tp": 1855,
+          "fp": 0,
+          "fn": 1548,
+          "tn": 1486
+        },
+        "pi_gnn": {
+          "accuracy": 0.7087338924115361,
+          "precision": 1.0,
+          "recall": 0.5815456949750221,
+          "f1": 0.7354143441099963,
+          "fpr": 0.0,
+          "roc_auc": 0.897852579605755,
+          "auprc": 0.9547157844067856,
+          "ece": 0.22233180799570085,
+          "threshold": 0.75,
+          "tp": 1979,
+          "fp": 0,
+          "fn": 1424,
+          "tn": 1486
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed44/baseline_eval.json"
+    },
+    {
+      "seed": 55,
+      "metrics": {
+        "random_forest": {
+          "accuracy": 0.7615054203313562,
+          "precision": 0.997332147621165,
+          "recall": 0.6591243020863944,
+          "f1": 0.7937013446567587,
+          "fpr": 0.004037685060565276,
+          "roc_auc": 0.9325652411042588,
+          "auprc": 0.9715295782904474,
+          "ece": 0.1905241358150951,
+          "threshold": 0.5,
+          "tp": 2243,
+          "fp": 6,
+          "fn": 1160,
+          "tn": 1480
+        },
+        "gcn": {
+          "accuracy": 0.7140519533646963,
+          "precision": 0.9931136251844564,
+          "recall": 0.593300029385836,
+          "f1": 0.7428256070640177,
+          "fpr": 0.009421265141318977,
+          "roc_auc": 0.6984271656431722,
+          "auprc": 0.890336496683838,
+          "ece": 0.27567139807703744,
+          "threshold": 0.5,
+          "tp": 2019,
+          "fp": 14,
+          "fn": 1384,
+          "tn": 1472
+        },
+        "graphsage": {
+          "accuracy": 0.7265289425240335,
+          "precision": 0.9990338164251208,
+          "recall": 0.6076990890390832,
+          "f1": 0.755709848346428,
+          "fpr": 0.0013458950201884253,
+          "roc_auc": 0.6796374349447819,
+          "auprc": 0.8845360735869303,
+          "ece": 0.29134100824622305,
+          "threshold": 0.15,
+          "tp": 2068,
+          "fp": 2,
+          "fn": 1335,
+          "tn": 1484
+        },
+        "gatv2": {
+          "accuracy": 0.7091429740233176,
+          "precision": 0.9945082376435347,
+          "recall": 0.5853658536585366,
+          "f1": 0.7369589345172031,
+          "fpr": 0.007402422611036339,
+          "roc_auc": 0.7640485455593177,
+          "auprc": 0.9057642460831223,
+          "ece": 0.26578414624857494,
+          "threshold": 0.44999999999999996,
+          "tp": 1992,
+          "fp": 11,
+          "fn": 1411,
+          "tn": 1475
+        },
+        "pi_gnn": {
+          "accuracy": 0.7062794027408468,
+          "precision": 1.0,
+          "recall": 0.5780193946517779,
+          "f1": 0.7325884543761639,
+          "fpr": 0.0,
+          "roc_auc": 0.9444103433396785,
+          "auprc": 0.977365619668367,
+          "ece": 0.20482499739903812,
+          "threshold": 0.699999988079071,
+          "tp": 1967,
+          "fp": 0,
+          "fn": 1436,
+          "tn": 1486
+        }
+      },
+      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed55/baseline_eval.json"
+    }
+  ],
+  "per_scenario_rows": [
+    {
+      "seed": 11,
+      "model": "data_only",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7252294437160516,
+        "recall": 0.568909785483397,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "tp": 1936,
+        "fp": 0,
+        "fn": 1467,
+        "tn": 1486,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 11,
+      "model": "random_forest",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.797673598872048,
+        "recall": 0.6650014692918014,
+        "precision": 0.9964773227653017,
+        "fpr": 0.005383580080753701,
+        "tp": 2263,
+        "fp": 8,
+        "fn": 1140,
+        "tn": 1478,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 11,
+      "model": "gcn",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.8085177733065056,
+        "recall": 0.7084925066118131,
+        "precision": 0.9414291292463881,
+        "fpr": 0.1009421265141319,
+        "tp": 2411,
+        "fp": 150,
+        "fn": 992,
+        "tn": 1336,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 11,
+      "model": "graphsage",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7683168316831684,
+        "recall": 0.6270937408169263,
+        "precision": 0.991635687732342,
+        "fpr": 0.012113055181695828,
+        "tp": 2134,
+        "fp": 18,
+        "fn": 1269,
+        "tn": 1468,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 11,
+      "model": "gatv2",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7358795051102744,
+        "recall": 0.6029973552747576,
+        "precision": 0.9438822447102115,
+        "fpr": 0.08209959623149395,
+        "tp": 2052,
+        "fp": 122,
+        "fn": 1351,
+        "tn": 1364,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 22,
+      "model": "data_only",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7302889095992545,
+        "recall": 0.5756685277696151,
+        "precision": 0.9984709480122325,
+        "fpr": 0.002018842530282638,
+        "tp": 1959,
+        "fp": 3,
+        "fn": 1444,
+        "tn": 1483,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 22,
+      "model": "random_forest",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7904085257548846,
+        "recall": 0.6538348516015281,
+        "precision": 0.9991019308486754,
+        "fpr": 0.0013458950201884253,
+        "tp": 2225,
+        "fp": 2,
+        "fn": 1178,
+        "tn": 1484,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 22,
+      "model": "gcn",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7999325804820495,
+        "recall": 0.6973258889215398,
+        "precision": 0.9379446640316206,
+        "fpr": 0.10565275908479138,
+        "tp": 2373,
+        "fp": 157,
+        "fn": 1030,
+        "tn": 1329,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 22,
+      "model": "graphsage",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7631149028861862,
+        "recall": 0.6176902732882751,
+        "precision": 0.9981006647673314,
+        "fpr": 0.0026917900403768506,
+        "tp": 2102,
+        "fp": 4,
+        "fn": 1301,
+        "tn": 1482,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 22,
+      "model": "gatv2",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7268648345485138,
+        "recall": 0.5712606523655598,
+        "precision": 0.998972250770812,
+        "fpr": 0.0013458950201884253,
+        "tp": 1944,
+        "fp": 2,
+        "fn": 1459,
+        "tn": 1484,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 33,
+      "model": "data_only",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.737759643916914,
+        "recall": 0.5844842785777256,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "tp": 1989,
+        "fp": 0,
+        "fn": 1414,
+        "tn": 1486,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 33,
+      "model": "random_forest",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7937743190661478,
+        "recall": 0.6594181604466647,
+        "precision": 0.9968902709906708,
+        "fpr": 0.004710632570659489,
+        "tp": 2244,
+        "fp": 7,
+        "fn": 1159,
+        "tn": 1479,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 33,
+      "model": "gcn",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7379432624113476,
+        "recall": 0.6115192477225977,
+        "precision": 0.9302637460885114,
+        "fpr": 0.10497981157469717,
+        "tp": 2081,
+        "fp": 156,
+        "fn": 1322,
+        "tn": 1330,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 33,
+      "model": "graphsage",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7544340830133479,
+        "recall": 0.6062297972377314,
+        "precision": 0.9985479186834463,
+        "fpr": 0.002018842530282638,
+        "tp": 2063,
+        "fp": 3,
+        "fn": 1340,
+        "tn": 1483,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 33,
+      "model": "gatv2",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.6691435275713727,
+        "recall": 0.5027916544225683,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "tp": 1711,
+        "fp": 0,
+        "fn": 1692,
+        "tn": 1486,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 44,
+      "model": "data_only",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7354143441099963,
+        "recall": 0.5815456949750221,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "tp": 1979,
+        "fp": 0,
+        "fn": 1424,
+        "tn": 1486,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 44,
+      "model": "random_forest",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7934205871949062,
+        "recall": 0.6591243020863944,
+        "precision": 0.9964460239893381,
+        "fpr": 0.005383580080753701,
+        "tp": 2243,
+        "fp": 8,
+        "fn": 1160,
+        "tn": 1478,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 44,
+      "model": "gcn",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7421545237658286,
+        "recall": 0.594181604466647,
+        "precision": 0.9882697947214076,
+        "fpr": 0.016150740242261104,
+        "tp": 2022,
+        "fp": 24,
+        "fn": 1381,
+        "tn": 1462,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 44,
+      "model": "graphsage",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7603787327021122,
+        "recall": 0.6135762562444902,
+        "precision": 0.9995213020584012,
+        "fpr": 0.0006729475100942127,
+        "tp": 2088,
+        "fp": 1,
+        "fn": 1315,
+        "tn": 1485,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 44,
+      "model": "gatv2",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.705591479650057,
+        "recall": 0.5451072583014986,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "tp": 1855,
+        "fp": 0,
+        "fn": 1548,
+        "tn": 1486,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 55,
+      "model": "data_only",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7325884543761639,
+        "recall": 0.5780193946517779,
+        "precision": 1.0,
+        "fpr": 0.0,
+        "tp": 1967,
+        "fp": 0,
+        "fn": 1436,
+        "tn": 1486,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 55,
+      "model": "random_forest",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7937013446567587,
+        "recall": 0.6591243020863944,
+        "precision": 0.997332147621165,
+        "fpr": 0.004037685060565276,
+        "tp": 2243,
+        "fp": 6,
+        "fn": 1160,
+        "tn": 1480,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 55,
+      "model": "gcn",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7428256070640177,
+        "recall": 0.593300029385836,
+        "precision": 0.9931136251844564,
+        "fpr": 0.009421265141318977,
+        "tp": 2019,
+        "fp": 14,
+        "fn": 1384,
+        "tn": 1472,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 55,
+      "model": "graphsage",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.755709848346428,
+        "recall": 0.6076990890390832,
+        "precision": 0.9990338164251208,
+        "fpr": 0.0013458950201884253,
+        "tp": 2068,
+        "fp": 2,
+        "fn": 1335,
+        "tn": 1484,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    },
+    {
+      "seed": 55,
+      "model": "gatv2",
+      "scenario": "scenario_h_mimic_heavy_overlap",
+      "metrics": {
+        "f1": 0.7369589345172031,
+        "recall": 0.5853658536585366,
+        "precision": 0.9945082376435347,
+        "fpr": 0.007402422611036339,
+        "tp": 1992,
+        "fp": 11,
+        "fn": 1411,
+        "tn": 1475,
+        "n_benign": 1486,
+        "n_attack": 3403,
+        "has_both_classes": true
+      }
+    }
+  ],
+  "overall_stats": {
+    "data_only": {
+      "f1": {
+        "n": 5,
+        "mean": 0.732256159143676,
+        "std": 0.0048378119414444285
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.5777255362915075,
+        "std": 0.005964673267759178
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.0004037685060565276,
+        "std": 0.0009028538267159312
+      }
+    },
+    "random_forest": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7937956751089491,
+        "std": 0.002581720294550825
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.6593006171025566,
+        "std": 0.003951275066464081
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.004172274562584118,
+        "std": 0.0016756257870778914
+      }
+    },
+    "gcn": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7662747494059498,
+        "std": 0.03482686957593974
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.6409638554216868,
+        "std": 0.057149369618451865
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.0674293405114401,
+        "std": 0.049971507091242096
+      }
+    },
+    "graphsage": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7603908797262485,
+        "std": 0.005648819478598236
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.6144578313253012,
+        "std": 0.008430201755968883
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.003768506056527591,
+        "std": 0.0047250308698632455
+      }
+    },
+    "gatv2": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7148876562794843,
+        "std": 0.028505245354405576
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.5615045548045842,
+        "std": 0.03905851865263564
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.01816958277254374,
+        "std": 0.03586879669242646
+      }
+    }
+  },
+  "paper_overall_stats": {
+    "data_only": {
+      "f1": {
+        "n": 5,
+        "mean": 0.732256159143676,
+        "std": 0.0048378119414444285
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.5777255362915075,
+        "std": 0.005964673267759178
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.0004037685060565276,
+        "std": 0.0009028538267159312
+      }
+    },
+    "random_forest": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7937956751089491,
+        "std": 0.002581720294550825
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.6593006171025566,
+        "std": 0.003951275066464081
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.004172274562584118,
+        "std": 0.0016756257870778914
+      }
+    },
+    "gcn": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7662747494059498,
+        "std": 0.03482686957593974
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.6409638554216868,
+        "std": 0.057149369618451865
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.0674293405114401,
+        "std": 0.049971507091242096
+      }
+    },
+    "graphsage": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7603908797262485,
+        "std": 0.005648819478598236
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.6144578313253012,
+        "std": 0.008430201755968883
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.003768506056527591,
+        "std": 0.0047250308698632455
+      }
+    },
+    "gatv2": {
+      "f1": {
+        "n": 5,
+        "mean": 0.7148876562794843,
+        "std": 0.028505245354405576
+      },
+      "recall": {
+        "n": 5,
+        "mean": 0.5615045548045842,
+        "std": 0.03905851865263564
+      },
+      "fpr": {
+        "n": 5,
+        "mean": 0.01816958277254374,
+        "std": 0.03586879669242646
+      }
+    }
+  },
+  "per_scenario_stats": {
+    "scenario_h_mimic_heavy_overlap": {
+      "data_only": {
+        "class_balance": {
+          "nodes": 4889,
+          "benign": 1486,
+          "attack": 3403,
+          "has_both_classes": true,
+          "attack_only": false,
+          "benign_only": false
+        },
+        "f1": {
+          "n": 5,
+          "mean": 0.732256159143676,
+          "std": 0.0048378119414444285
+        },
+        "recall": {
+          "n": 5,
+          "mean": 0.5777255362915075,
+          "std": 0.005964673267759178
+        },
+        "fpr": {
+          "n": 5,
+          "mean": 0.0004037685060565276,
+          "std": 0.0009028538267159312
+        }
+      },
+      "random_forest": {
+        "class_balance": {
+          "nodes": 4889,
+          "benign": 1486,
+          "attack": 3403,
+          "has_both_classes": true,
+          "attack_only": false,
+          "benign_only": false
+        },
+        "f1": {
+          "n": 5,
+          "mean": 0.7937956751089491,
+          "std": 0.002581720294550825
+        },
+        "recall": {
+          "n": 5,
+          "mean": 0.6593006171025566,
+          "std": 0.003951275066464081
+        },
+        "fpr": {
+          "n": 5,
+          "mean": 0.004172274562584118,
+          "std": 0.0016756257870778914
+        }
+      },
+      "gcn": {
+        "class_balance": {
+          "nodes": 4889,
+          "benign": 1486,
+          "attack": 3403,
+          "has_both_classes": true,
+          "attack_only": false,
+          "benign_only": false
+        },
+        "f1": {
+          "n": 5,
+          "mean": 0.7662747494059498,
+          "std": 0.03482686957593974
+        },
+        "recall": {
+          "n": 5,
+          "mean": 0.6409638554216868,
+          "std": 0.057149369618451865
+        },
+        "fpr": {
+          "n": 5,
+          "mean": 0.0674293405114401,
+          "std": 0.049971507091242096
+        }
+      },
+      "graphsage": {
+        "class_balance": {
+          "nodes": 4889,
+          "benign": 1486,
+          "attack": 3403,
+          "has_both_classes": true,
+          "attack_only": false,
+          "benign_only": false
+        },
+        "f1": {
+          "n": 5,
+          "mean": 0.7603908797262485,
+          "std": 0.005648819478598236
+        },
+        "recall": {
+          "n": 5,
+          "mean": 0.6144578313253012,
+          "std": 0.008430201755968883
+        },
+        "fpr": {
+          "n": 5,
+          "mean": 0.003768506056527591,
+          "std": 0.0047250308698632455
+        }
+      },
+      "gatv2": {
+        "class_balance": {
+          "nodes": 4889,
+          "benign": 1486,
+          "attack": 3403,
+          "has_both_classes": true,
+          "attack_only": false,
+          "benign_only": false
+        },
+        "f1": {
+          "n": 5,
+          "mean": 0.7148876562794843,
+          "std": 0.028505245354405576
+        },
+        "recall": {
+          "n": 5,
+          "mean": 0.5615045548045842,
+          "std": 0.03905851865263564
+        },
+        "fpr": {
+          "n": 5,
+          "mean": 0.01816958277254374,
+          "std": 0.03586879669242646
+        }
+      }
+    }
+  },
+  "attack_only_probe": {},
+  "p_values": {
+    "graphsage_vs_gcn_f1": 0.6363636363636364,
+    "gatv2_vs_gcn_f1": 0.09090909090909091,
+    "best_nonphysics_vs_data_only_f1": 0.09090909090909091
+  },
+  "physics_decision": {
+    "cross_scenario_physics": "skipped",
+    "reason": "mixed scenario capacities make current single-capacity physics loss hard to interpret cleanly"
+  },
+  "paper_recommendation": "main_table",
+  "warnings": [],
+  "best_nonphysics_baseline": "random_forest"
+}
