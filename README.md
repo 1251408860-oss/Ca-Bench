@@ -66,7 +66,7 @@ The Mininet scenario-generation script also requires a valid `LLM_API_KEY` or `D
 - `torch`
 - `torch-geometric`
 - `scikit-learn`
-- `flwr`
+- `flwr[simulation]` (installs the `ray` backend required by the federated experiments)
 - `scapy`
 
 ### Mininet scenario-generation dependencies
@@ -85,3 +85,5 @@ The Mininet scenario-generation script also requires a valid `LLM_API_KEY` or `D
 The offline benchmark can start directly from the downloadable packet-capture bundle above. Running the Mininet module is only required for reviewers who want to regenerate the five packet captures from scratch in a Mininet-capable Ubuntu/Linux environment.
 
 Detailed execution commands, expected inputs, and output locations are documented in the `README.md` file of each submodule.
+
+For manuscript-facing paper outputs, `core_experiments/make_paper_tables_figs.py` now takes the `congestion_ood` values for Table 1 and Figure 1 from `paper_artifacts/runs/main_suite/` by default so the generated summary stays aligned with the submitted paper. The separate `congestion_focus` run remains available as an auxiliary stress sweep. The submitted table values are additionally frozen in [`paper_artifacts/manuscript_reference.json`](./paper_artifacts/manuscript_reference.json), which is used only when regenerating the paper-ready tables.

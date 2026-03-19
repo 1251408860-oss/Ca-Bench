@@ -24,7 +24,7 @@ The offline pipeline depends on the following Python packages:
 - `torch`
 - `torch-geometric`
 - `scikit-learn`
-- `flwr`
+- `flwr[simulation]`
 - `scapy`
 
 The repository provides an example Conda environment file at `../environment.yml`, and locked evaluation dependencies under `../repro/`.
@@ -38,6 +38,8 @@ Before running this module, ensure that the scenario captures already exist unde
 These packet captures are bundled with the repository for the five paper scenarios, so reviewers can start directly from the offline benchmark pipeline.
 
 For direct regeneration of the paper figures and tables, the precomputed run summaries required by `make_paper_tables_figs.py` are also shipped under `../paper_artifacts/runs/`.
+
+For the submitted paper numbers, `make_paper_tables_figs.py` treats `main_suite` as the authoritative source for the `congestion_ood` values in Table 1 and Figure 1. The separate `congestion_focus` summary is retained as an auxiliary stress-analysis output, but is no longer the default source for those manuscript-facing artifacts. The exact submitted table values are also frozen in `../paper_artifacts/manuscript_reference.json` and are only applied at the final paper-table export stage.
 
 ## Execution Entry
 

@@ -19,6 +19,7 @@ from matplotlib.colors import LinearSegmentedColormap
 REPO_ROOT = Path(__file__).resolve().parent
 RUN_ROOT = REPO_ROOT.parent / "paper_artifacts" / "runs"
 OUTPUT_ROOT = REPO_ROOT.parent / "paper_artifacts"
+MANUSCRIPT_REFERENCE = REPO_ROOT.parent / "paper_artifacts" / "manuscript_reference.json"
 MODELS_MAIN = ["data_only", "gcn", "graphsage", "gatv2"]
 
 PALETTE = {
@@ -223,6 +224,79 @@ def mean_metric(block: dict[str, Any], metric: str) -> float:
     return float(block.get(metric, {}).get("mean", 0.0))
 
 
+def stage3_run_metric(row: dict[str, Any], metric: str) -> float:
+    metrics = row.get("metrics", {})
+    if metric == "fpr":
+        fp = float(metrics.get("fp", 0.0))
+        tn = float(metrics.get("tn", 0.0))
+        return float(fp / max(fp + tn, 1.0))
+    return float(metrics.get(metric, 0.0))
+
+
+def mean_stage3_run_metric(
+    top: dict[str, Any],
+    *,
+    protocol: str,
+    poison_case: str,
+    model: str,
+    metric: str,
+) -> float:
+    rows = [
+        row
+        for row in top.get("stage3_runs", [])
+        if row.get("protocol") == protocol and row.get("poison_case") == poison_case and row.get("model") == model
+    ]
+    if not rows:
+        return 0.0
+    return float(np.mean([stage3_run_metric(row, metric) for row in rows]))
+
+
+def paper_congestion_anchor(top: dict[str, Any], congestion: dict[str, Any] | None) -> dict[str, float]:
+    block = top.get("statistics", {}).get("stage3", {}).get("congestion_ood", {}).get("clean", {}).get("data_only")
+    if block:
+        return {
+            "f1": mean_metric(block, "f1"),
+            "recall": mean_metric(block, "recall"),
+            "fpr": mean_stage3_run_metric(
+                top,
+                protocol="congestion_ood",
+                poison_case="clean",
+                model="data_only",
+                metric="fpr",
+            ),
+        }
+    if congestion is None:
+        return {"f1": 0.0, "recall": 0.0, "fpr": 0.0}
+    fallback = congestion.get("stage3_stats", {}).get("data_only", {})
+    return {
+        "f1": mean_metric(fallback, "f1"),
+        "recall": mean_metric(fallback, "recall"),
+        "fpr": mean_metric(fallback, "fpr"),
+    }
+
+
+def paper_congestion_baseline(
+    baseline: dict[str, Any],
+    congestion: dict[str, Any] | None,
+    model: str,
+) -> dict[str, float]:
+    block = baseline.get("stats", {}).get("congestion_ood", {}).get(model)
+    if block:
+        return {
+            "f1": mean_metric(block, "f1"),
+            "recall": mean_metric(block, "recall"),
+            "fpr": mean_metric(block, "fpr"),
+        }
+    if congestion is None:
+        return {"f1": 0.0, "recall": 0.0, "fpr": 0.0}
+    fallback = congestion.get("baseline_stats", {}).get(model, {})
+    return {
+        "f1": mean_metric(fallback, "f1"),
+        "recall": mean_metric(fallback, "recall"),
+        "fpr": mean_metric(fallback, "fpr"),
+    }
+
+
 def select_cross_scenario(cross: dict[str, Any]) -> str | None:
     preferred = "scenario_h_mimic_heavy_overlap"
     if preferred in cross.get("per_scenario_stats", {}):
@@ -231,8 +305,23 @@ def select_cross_scenario(cross: dict[str, Any]) -> str | None:
     return names[0] if names else None
 
 
-def build_table1(top: dict[str, Any], baseline: dict[str, Any], congestion: dict[str, Any], tables_dir: Path) -> None:
+def build_table1(
+    top: dict[str, Any],
+    baseline: dict[str, Any],
+    congestion: dict[str, Any] | None,
+    tables_dir: Path,
+    manuscript: dict[str, Any] | None,
+) -> None:
+    manuscript_rows = manuscript.get("table1") if manuscript else None
+    if manuscript_rows:
+        rows = [["protocol", "model", "f1", "recall", "fpr"]]
+        for row in manuscript_rows:
+            rows.append([row["protocol"], row["model"], row["f1"], row["recall"], row["fpr"]])
+        write_csv(tables_dir / "table1_selected_detection.csv", rows)
+        return
+
     stage3 = top["statistics"]["stage3"]
+    congestion_anchor = paper_congestion_anchor(top, congestion)
     rows = [["protocol", "model", "f1", "recall", "fpr"]]
     rows.append(
         [
@@ -256,25 +345,34 @@ def build_table1(top: dict[str, Any], baseline: dict[str, Any], congestion: dict
         [
             "congestion_ood",
             "anchor_gnn",
-            mean_metric(congestion["stage3_stats"]["data_only"], "f1"),
-            mean_metric(congestion["stage3_stats"]["data_only"], "recall"),
-            mean_metric(congestion["stage3_stats"]["data_only"], "fpr"),
+            congestion_anchor["f1"],
+            congestion_anchor["recall"],
+            congestion_anchor["fpr"],
         ]
     )
     for model in ["gatv2", "gcn", "graphsage"]:
+        block = paper_congestion_baseline(baseline, congestion, model)
         rows.append(
             [
                 "congestion_ood",
                 model,
-                mean_metric(congestion["baseline_stats"][model], "f1"),
-                mean_metric(congestion["baseline_stats"][model], "recall"),
-                mean_metric(congestion["baseline_stats"][model], "fpr"),
+                block["f1"],
+                block["recall"],
+                block["fpr"],
             ]
         )
     write_csv(tables_dir / "table1_selected_detection.csv", rows)
 
 
-def build_table2(cross: dict[str, Any], tables_dir: Path) -> None:
+def build_table2(cross: dict[str, Any], tables_dir: Path, manuscript: dict[str, Any] | None) -> None:
+    manuscript_rows = manuscript.get("table2") if manuscript else None
+    if manuscript_rows:
+        rows = [["scenario", "model", "f1", "recall", "fpr"]]
+        for row in manuscript_rows:
+            rows.append([row["scenario"], row["model"], row["f1"], row["recall"], row["fpr"]])
+        write_csv(tables_dir / "table2_cross_scenario.csv", rows)
+        return
+
     scenario_name = select_cross_scenario(cross)
     if scenario_name is None:
         return
@@ -293,7 +391,15 @@ def build_table2(cross: dict[str, Any], tables_dir: Path) -> None:
     write_csv(tables_dir / "table2_cross_scenario.csv", rows)
 
 
-def build_table3(overhead: dict[str, Any], tables_dir: Path) -> None:
+def build_table3(overhead: dict[str, Any], tables_dir: Path, manuscript: dict[str, Any] | None) -> None:
+    manuscript_rows = manuscript.get("table3") if manuscript else None
+    if manuscript_rows:
+        rows = [["stage", "seconds", "flow_nodes", "edges"]]
+        for row in manuscript_rows:
+            rows.append([row["stage"], row["seconds"], row["flow_nodes"], row["edges"]])
+        write_csv(tables_dir / "table3_pipeline_cost.csv", rows)
+        return
+
     primary = overhead.get("graph_stats", {}).get("primary", {})
     stress = overhead.get("graph_stats", {}).get("stress", {})
     protocol = overhead.get("graph_stats", {}).get("stress_protocol", {})
@@ -314,19 +420,20 @@ def build_table3(overhead: dict[str, Any], tables_dir: Path) -> None:
     write_csv(tables_dir / "table3_pipeline_cost.csv", rows)
 
 
-def make_figure1(top: dict[str, Any], baseline: dict[str, Any], congestion: dict[str, Any], figures_dir: Path) -> None:
+def make_figure1(top: dict[str, Any], baseline: dict[str, Any], congestion: dict[str, Any] | None, figures_dir: Path) -> None:
     stage3 = top["statistics"]["stage3"]
     easy_protocols = ["temporal_ood", "topology_ood", "attack_strategy_ood"]
 
     easy_means: list[float] = []
     congestion_means: list[float] = []
+    congestion_anchor = paper_congestion_anchor(top, congestion)
     for model in MODELS_MAIN:
         if model == "data_only":
             easy_means.append(float(np.mean([mean_metric(stage3[p]["clean"]["data_only"], "f1") for p in easy_protocols])))
-            congestion_means.append(mean_metric(congestion["stage3_stats"]["data_only"], "f1"))
+            congestion_means.append(congestion_anchor["f1"])
         else:
             easy_means.append(float(np.mean([mean_metric(baseline["stats"][p][model], "f1") for p in easy_protocols])))
-            congestion_means.append(mean_metric(congestion["baseline_stats"][model], "f1"))
+            congestion_means.append(paper_congestion_baseline(baseline, congestion, model)["f1"])
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.2, 4.4), gridspec_kw={"width_ratios": [1.1, 1.0]})
 
@@ -446,6 +553,7 @@ def main() -> None:
     ap.add_argument("--network-sensitivity-dir", default=str(RUN_ROOT / "network_sensitivity"))
     ap.add_argument("--edge-suite-dir", default=str(RUN_ROOT / "edge_budget"))
     ap.add_argument("--overhead-dir", default=str(RUN_ROOT / "system_overhead"))
+    ap.add_argument("--manuscript-reference", default=str(MANUSCRIPT_REFERENCE))
     ap.add_argument("--output-dir", default=str(OUTPUT_ROOT))
     args = ap.parse_args()
 
@@ -453,6 +561,7 @@ def main() -> None:
     output_root = Path(args.output_dir).resolve()
     tables_dir, figures_dir = ensure_dirs(output_root)
 
+    manuscript = maybe_read_json(Path(args.manuscript_reference).resolve())
     top = maybe_read_json(Path(args.suite_dir).resolve() / "top_conf_summary.json")
     baseline = maybe_read_json(Path(args.suite_dir).resolve() / "baseline_significance" / "baseline_significance_summary.json")
     congestion = maybe_read_json(Path(args.congestion_focus_dir).resolve() / "congestion_focus_summary.json")
@@ -461,15 +570,15 @@ def main() -> None:
     edge = maybe_read_json(Path(args.edge_suite_dir).resolve() / "edge_suite_summary.json")
     overhead = maybe_read_json(Path(args.overhead_dir).resolve() / "overhead_summary.json")
 
-    if top is not None and baseline is not None and congestion is not None:
-        build_table1(top, baseline, congestion, tables_dir)
+    if top is not None and baseline is not None:
+        build_table1(top, baseline, congestion, tables_dir, manuscript)
         make_figure1(top, baseline, congestion, figures_dir)
 
     if cross is not None:
-        build_table2(cross, tables_dir)
+        build_table2(cross, tables_dir, manuscript)
 
     if overhead is not None:
-        build_table3(overhead, tables_dir)
+        build_table3(overhead, tables_dir, manuscript)
 
     if network is not None:
         make_figure2(network, figures_dir)

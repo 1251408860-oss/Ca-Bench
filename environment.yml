@@ -15,6 +15,6 @@ dependencies:
   - cpuonly
   - pytorch-geometric
   - pip:
-      - flwr
+      - "flwr[simulation]==1.26.1"
       - locust
       - openai
