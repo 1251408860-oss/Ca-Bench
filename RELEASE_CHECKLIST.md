@@ -1,71 +1,31 @@
-# Ca-Bench Release Checklist
+# Ca-Bench: Release Preparation Notes
 
-This checklist is intended for preparing the repository tree for a direct push to GitHub.
+This document summarizes how the repository should be packaged when preparing a direct GitHub push or a public artifact release. The goal is to keep the tracked repository tree aligned with the online documentation while separating large mirrored assets and local validation outputs from the main source archive.
 
-## Keep In The Repository
+## Repository Tree Intended for Direct Publication
 
-- `README.md`
-- `environment.yml`
-- `.gitignore`
-- `core_experiments/`
-- `mininet_testbed/`
-- `mininet_testbed/real_collection/`
-- `paper_artifacts/runs/`
-- `paper_artifacts/tables/`
-- `paper_artifacts/figures/`
-- `paper_artifacts/manuscript_reference.json`
-- `repro/`
+The tracked repository should retain the core documentation, environment description, experiment code, shipped packet captures, and paper-facing outputs. In practical terms, the public tree is expected to include `README.md`, `environment.yml`, `.gitignore`, `core_experiments/`, `mininet_testbed/`, `paper_artifacts/`, and `repro/`.
 
-## Publish As Release Assets, Not As Repo Files
+Within this tree, the five paper packet captures remain part of the repository checkout under `mininet_testbed/real_collection/`. The released run summaries under `paper_artifacts/runs/`, the exported tables under `paper_artifacts/tables/`, the exported figures under `paper_artifacts/figures/`, and the optional frozen manuscript reference at `paper_artifacts/manuscript_reference.json` are also intended to stay in version control because they support direct inspection of the published artifact.
 
-- `real_collection.tar.gz`
-- `real_collection.tar.gz.sha256`
+## Mirrored Dataset Bundle
 
-Reason:
-- the packet captures are already shipped inside `mininet_testbed/real_collection/`
-- the tarball is only a mirror bundle for reviewers who prefer a separate download
+The files `real_collection.tar.gz` and `real_collection.tar.gz.sha256` should be treated as release assets rather than ordinary repository files. They are useful as a mirrored download path for reviewers who prefer a separate archive, but they duplicate the captures that are already shipped in `mininet_testbed/real_collection/`.
 
-## Keep Local Only
+For that reason, the recommended release flow is to keep the repository tree focused on the checked-in artifact contents and upload the tarball pair to the GitHub release page, currently referenced as `data-v1`.
 
-- `repro_runs/`
-- `BLOCKSYS_HITRUST_EXPERIMENT_DEV_DOC.md`
+## Local-Only Working Outputs
 
-Reason:
-- these are local validation outputs or unrelated working notes
-- they do not belong to the public artifact tree
+The directory `repro_runs/` is a local validation workspace and should not be part of the public repository history. The same applies to unrelated working notes such as `BLOCKSYS_HITRUST_EXPERIMENT_DEV_DOC.md`. These files are useful during development, but they are not part of the published Ca-Bench artifact package and should remain excluded from normal pushes.
 
 ## Pre-Push Verification
 
-1. Confirm the five shipped captures exist under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`.
-2. Confirm the shipped summaries exist under `paper_artifacts/runs/`.
-3. Confirm tables exist under `paper_artifacts/tables/`.
-4. Confirm figures exist under `paper_artifacts/figures/`.
-5. Confirm `README.md`, `core_experiments/README.md`, `mininet_testbed/README.md`, and `repro/README.md` are consistent about:
-   - bundled packet captures
-   - optional release mirror
-   - API key only being needed for payload regeneration
-   - `python` being the default interpreter
-6. Confirm no stale references remain to:
-   - `FedSTGCN`
-   - `run_oneclick_recharge`
-   - `run_oneclick.ps1`
-   - `/home/user/miniconda3/envs/DL/bin/python`
+Before pushing a release-oriented update, verify that the five shipped captures are still present under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`, that the public summaries remain available under `paper_artifacts/runs/`, and that the exported tables and figures are present under `paper_artifacts/tables/` and `paper_artifacts/figures/`.
 
-## Recommended Push Set
+It is also worth confirming that the main documentation files, including the repository root `README.md`, `core_experiments/README.md`, `mininet_testbed/README.md`, and `repro/README.md`, remain consistent about three points: the packet captures are bundled in the checkout, the GitHub release provides only an optional mirror, and API keys are only needed when regenerating the payload file rather than when replaying the default path.
 
-If you want a clean first commit or upload, the effective publish tree is:
-
-- `README.md`
-- `environment.yml`
-- `.gitignore`
-- `core_experiments/`
-- `mininet_testbed/`
-- `paper_artifacts/`
-- `repro/`
+Finally, check that stale project references from earlier drafts are not reintroduced into the published documentation. In particular, the public-facing files should not refer to `FedSTGCN`, `run_oneclick_recharge`, `run_oneclick.ps1`, or the old hard-coded interpreter path `/home/user/miniconda3/envs/DL/bin/python`.
 
 ## Recommended Release Flow
 
-1. Push the repository tree without `repro_runs/`, the mirror tarball, or unrelated notes.
-2. Create or update the GitHub release tag `data-v1`.
-3. Upload `real_collection.tar.gz` and `real_collection.tar.gz.sha256` to that release.
-4. Recheck the release links referenced in `README.md`.
+The simplest release path is to push the cleaned repository tree first, without `repro_runs/`, the mirrored tarball files, or unrelated local notes. After that, create or update the GitHub release entry and attach `real_collection.tar.gz` together with `real_collection.tar.gz.sha256`. Once the release assets are in place, perform one final check to ensure that the download links referenced in `README.md` still match the published release page.
