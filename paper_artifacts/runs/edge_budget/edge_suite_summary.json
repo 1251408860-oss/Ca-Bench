@@ -1,9 +1,5 @@
 {
   "config": {
-    "project_dir": "/home/user/FedSTGCN",
-    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
-    "real_collection_dir": "/home/user/FedSTGCN/real_collection",
-    "output_dir": "/home/user/FedSTGCN/submission_runs/phase6_wasa_edge",
     "scenario": "scenario_h_mimic_heavy_overlap",
     "seeds": "11,22,33",
     "aggregators": "fedavg,median",

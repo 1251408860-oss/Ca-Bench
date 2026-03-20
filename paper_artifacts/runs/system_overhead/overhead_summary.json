@@ -1,9 +1,5 @@
 {
   "config": {
-    "project_dir": "/home/user/FedSTGCN",
-    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
-    "real_collection_dir": "/home/user/FedSTGCN/real_collection",
-    "output_dir": "/home/user/FedSTGCN/submission_runs/phase7_wasa_overhead",
     "scenario_build": "scenario_e_three_tier_high2",
     "scenario_stress": "scenario_h_mimic_heavy_overlap",
     "epochs": 80,

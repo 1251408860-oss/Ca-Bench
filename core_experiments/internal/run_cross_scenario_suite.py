@@ -670,7 +670,7 @@ def write_markdown(
 def main() -> None:
     p = argparse.ArgumentParser(description="Run cross-scenario evaluation with scenario audit and optional stress hardening")
     p.add_argument("--project-dir", default=str(REPO_ROOT))
-    p.add_argument("--python-bin", default="/home/user/miniconda3/envs/DL/bin/python")
+    p.add_argument("--python-bin", default="python")
     p.add_argument("--real-collection-dir", default=str(DATA_ROOT))
     p.add_argument("--output-dir", default=str(RUN_ROOT / "cross_scenario"))
     p.add_argument("--train-scenarios", default="scenario_d_three_tier_low2,scenario_e_three_tier_high2,scenario_f_two_tier_high2")

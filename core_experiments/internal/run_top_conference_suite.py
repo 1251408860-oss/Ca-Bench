@@ -96,7 +96,7 @@ def pick_fed_metrics(fed: dict[str, Any]) -> dict[str, float]:
 def main() -> None:
     p = argparse.ArgumentParser(description="Run high-standard suite")
     p.add_argument("--project-dir", default=str(REPO_ROOT))
-    p.add_argument("--python-bin", default="/home/user/miniconda3/envs/DL/bin/python")
+    p.add_argument("--python-bin", default="python")
     p.add_argument("--output-dir", default=str(RUN_ROOT / "main_suite"))
     p.add_argument("--real-collection-dir", default=str(DATA_ROOT))
     p.add_argument("--seeds", default="11,22,33,44,55")

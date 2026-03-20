@@ -1,9 +1,5 @@
 {
   "config": {
-    "project_dir": "/home/user/FedSTGCN",
-    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
-    "output_dir": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite",
-    "real_collection_dir": "/home/user/FedSTGCN/real_collection",
     "seeds": "11,22,33,44,55",
     "stage3_epochs": 140,
     "fed_rounds": 4,
@@ -27,40 +23,26 @@
   },
   "real_capture_graphs": {
     "scenario_d_three_tier_low2": {
-      "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/graphs/scenario_d_three_tier_low2.pt",
-      "log": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/logs/build_graph_scenario_d_three_tier_low2.log",
       "duration_sec": 13.811938762664795
     },
     "scenario_e_three_tier_high2": {
-      "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/graphs/scenario_e_three_tier_high2.pt",
-      "log": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/logs/build_graph_scenario_e_three_tier_high2.log",
       "duration_sec": 17.822049379348755
     },
     "scenario_f_two_tier_high2": {
-      "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/graphs/scenario_f_two_tier_high2.pt",
-      "log": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/logs/build_graph_scenario_f_two_tier_high2.log",
       "duration_sec": 14.298181772232056
     }
   },
   "protocol_graphs": {
     "temporal_ood": {
-      "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/protocol_graphs/temporal_ood.pt",
-      "log": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/logs/protocol_temporal_ood.log",
       "duration_sec": 1.9281256198883057
     },
     "topology_ood": {
-      "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/protocol_graphs/topology_ood.pt",
-      "log": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/logs/protocol_topology_ood.log",
       "duration_sec": 1.9015064239501953
     },
     "attack_strategy_ood": {
-      "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/protocol_graphs/attack_strategy_ood.pt",
-      "log": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/logs/protocol_attack_strategy_ood.log",
       "duration_sec": 1.9334266185760498
     },
     "congestion_ood": {
-      "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/protocol_graphs/congestion_ood.pt",
-      "log": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/logs/protocol_congestion_ood.log",
       "duration_sec": 1.8906152248382568
     }
   },
@@ -73,7 +55,6 @@
       "model": "data_only",
       "seed": 11,
       "duration_sec": 31.98213291168213,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__data_only__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9942339373970346,
         "precision": 0.9987484355444305,
@@ -97,7 +78,6 @@
       "model": "physics_stable",
       "seed": 11,
       "duration_sec": 26.632035493850708,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__physics_stable__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.8962108731466227,
         "precision": 0.9544235924932976,
@@ -121,7 +101,6 @@
       "model": "data_only",
       "seed": 22,
       "duration_sec": 26.031198978424072,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__data_only__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.9942339373970346,
         "precision": 0.9987484355444305,
@@ -145,7 +124,6 @@
       "model": "physics_stable",
       "seed": 22,
       "duration_sec": 26.350818395614624,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__physics_stable__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.8912685337726524,
         "precision": 0.8952941176470588,
@@ -169,7 +147,6 @@
       "model": "data_only",
       "seed": 33,
       "duration_sec": 25.888665437698364,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__data_only__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9934102141680395,
         "precision": 0.9987468671679198,
@@ -193,7 +170,6 @@
       "model": "physics_stable",
       "seed": 33,
       "duration_sec": 25.28709578514099,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__physics_stable__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.8665568369028006,
         "precision": 0.9421487603305785,
@@ -217,7 +193,6 @@
       "model": "data_only",
       "seed": 44,
       "duration_sec": 24.082978010177612,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__data_only__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.9950576606260296,
         "precision": 1.0,
@@ -241,7 +216,6 @@
       "model": "physics_stable",
       "seed": 44,
       "duration_sec": 22.565420389175415,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__physics_stable__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.9629324546952224,
         "precision": 0.9986859395532195,
@@ -265,7 +239,6 @@
       "model": "data_only",
       "seed": 55,
       "duration_sec": 21.692784309387207,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__data_only__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9934102141680395,
         "precision": 1.0,
@@ -289,7 +262,6 @@
       "model": "physics_stable",
       "seed": 55,
       "duration_sec": 21.482922792434692,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/temporal_ood__clean__physics_stable__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.8797364085667215,
         "precision": 0.9969788519637462,
@@ -313,7 +285,6 @@
       "model": "data_only",
       "seed": 11,
       "duration_sec": 23.760430812835693,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__data_only__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9981768459434822,
         "precision": 0.9984939759036144,
@@ -337,7 +308,6 @@
       "model": "physics_stable",
       "seed": 11,
       "duration_sec": 23.829960584640503,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__physics_stable__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9361896080218779,
         "precision": 0.9852941176470589,
@@ -361,7 +331,6 @@
       "model": "data_only",
       "seed": 22,
       "duration_sec": 24.011519193649292,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__data_only__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.9981768459434822,
         "precision": 0.9984939759036144,
@@ -385,7 +354,6 @@
       "model": "physics_stable",
       "seed": 22,
       "duration_sec": 23.93785858154297,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__physics_stable__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.9316317228805834,
         "precision": 0.9835796387520526,
@@ -409,7 +377,6 @@
       "model": "data_only",
       "seed": 33,
       "duration_sec": 24.826731204986572,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__data_only__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9981768459434822,
         "precision": 0.9984939759036144,
@@ -433,7 +400,6 @@
       "model": "physics_stable",
       "seed": 33,
       "duration_sec": 24.951131582260132,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__physics_stable__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9562443026435734,
         "precision": 0.9782608695652174,
@@ -457,7 +423,6 @@
       "model": "data_only",
       "seed": 44,
       "duration_sec": 24.011194705963135,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__data_only__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.9981768459434822,
         "precision": 1.0,
@@ -481,7 +446,6 @@
       "model": "physics_stable",
       "seed": 44,
       "duration_sec": 24.910682916641235,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__physics_stable__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.9762989972652689,
         "precision": 0.9761194029850746,
@@ -505,7 +469,6 @@
       "model": "data_only",
       "seed": 55,
       "duration_sec": 25.4736065864563,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__data_only__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9990884229717412,
         "precision": 1.0,
@@ -529,7 +492,6 @@
       "model": "physics_stable",
       "seed": 55,
       "duration_sec": 23.96177363395691,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/topology_ood__clean__physics_stable__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9580674567000912,
         "precision": 0.9598214285714286,
@@ -553,7 +515,6 @@
       "model": "data_only",
       "seed": 11,
       "duration_sec": 25.11182737350464,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__data_only__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9989258861439313,
         "precision": 1.0,
@@ -577,7 +538,6 @@
       "model": "physics_stable",
       "seed": 11,
       "duration_sec": 24.82551074028015,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__physics_stable__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.8732545649838883,
         "precision": 0.9460093896713615,
@@ -601,7 +561,6 @@
       "model": "data_only",
       "seed": 22,
       "duration_sec": 25.0672550201416,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__data_only__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.9989258861439313,
         "precision": 1.0,
@@ -625,7 +584,6 @@
       "model": "physics_stable",
       "seed": 22,
       "duration_sec": 25.18546175956726,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__physics_stable__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.8356605800214822,
         "precision": 0.8741865509761388,
@@ -649,7 +607,6 @@
       "model": "data_only",
       "seed": 33,
       "duration_sec": 25.622562646865845,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__data_only__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9989258861439313,
         "precision": 1.0,
@@ -673,7 +630,6 @@
       "model": "physics_stable",
       "seed": 33,
       "duration_sec": 25.51699423789978,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__physics_stable__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9022556390977443,
         "precision": 0.9532293986636972,
@@ -697,7 +653,6 @@
       "model": "data_only",
       "seed": 44,
       "duration_sec": 25.879444122314453,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__data_only__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.9978517722878625,
         "precision": 1.0,
@@ -721,7 +676,6 @@
       "model": "physics_stable",
       "seed": 44,
       "duration_sec": 25.368282556533813,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__physics_stable__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.8796992481203008,
         "precision": 0.9530516431924883,
@@ -745,7 +699,6 @@
       "model": "data_only",
       "seed": 55,
       "duration_sec": 25.346113920211792,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__data_only__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9989258861439313,
         "precision": 1.0,
@@ -769,7 +722,6 @@
       "model": "physics_stable",
       "seed": 55,
       "duration_sec": 26.232720851898193,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__clean__physics_stable__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9473684210526315,
         "precision": 0.9766454352441614,
@@ -793,7 +745,6 @@
       "model": "data_only",
       "seed": 11,
       "duration_sec": 27.08677077293396,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__data_only__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9978517722878625,
         "precision": 1.0,
@@ -817,7 +768,6 @@
       "model": "physics_stable",
       "seed": 11,
       "duration_sec": 26.56505274772644,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__physics_stable__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9194414607948442,
         "precision": 0.9471458773784355,
@@ -841,7 +791,6 @@
       "model": "data_only",
       "seed": 22,
       "duration_sec": 27.542648315429688,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__data_only__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.9946294307196563,
         "precision": 0.9920159680638723,
@@ -865,7 +814,6 @@
       "model": "physics_stable",
       "seed": 22,
       "duration_sec": 26.325326204299927,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__physics_stable__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.9119226638023631,
         "precision": 0.985981308411215,
@@ -889,7 +837,6 @@
       "model": "data_only",
       "seed": 33,
       "duration_sec": 27.540464878082275,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__data_only__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9978517722878625,
         "precision": 0.9979919678714859,
@@ -913,7 +860,6 @@
       "model": "physics_stable",
       "seed": 33,
       "duration_sec": 26.716676473617554,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__physics_stable__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9377013963480129,
         "precision": 0.9761904761904762,
@@ -937,7 +883,6 @@
       "model": "data_only",
       "seed": 44,
       "duration_sec": 27.51411485671997,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__data_only__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.9935553168635876,
         "precision": 0.9900398406374502,
@@ -961,7 +906,6 @@
       "model": "physics_stable",
       "seed": 44,
       "duration_sec": 26.997037172317505,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__physics_stable__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.8872180451127819,
         "precision": 0.9496567505720824,
@@ -985,7 +929,6 @@
       "model": "data_only",
       "seed": 55,
       "duration_sec": 28.555625200271606,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__data_only__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9967776584317938,
         "precision": 1.0,
@@ -1009,7 +952,6 @@
       "model": "physics_stable",
       "seed": 55,
       "duration_sec": 26.763322830200195,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison20__physics_stable__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9183673469387755,
         "precision": 0.9567099567099567,
@@ -1033,7 +975,6 @@
       "model": "data_only",
       "seed": 11,
       "duration_sec": 26.784562349319458,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__data_only__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9989258861439313,
         "precision": 1.0,
@@ -1057,7 +998,6 @@
       "model": "physics_stable",
       "seed": 11,
       "duration_sec": 26.287615299224854,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__physics_stable__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.9140708915145005,
         "precision": 0.9771689497716894,
@@ -1081,7 +1021,6 @@
       "model": "data_only",
       "seed": 22,
       "duration_sec": 26.236969709396362,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__data_only__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.9935553168635876,
         "precision": 0.992,
@@ -1105,7 +1044,6 @@
       "model": "physics_stable",
       "seed": 22,
       "duration_sec": 26.31035876274109,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__physics_stable__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.882921589688507,
         "precision": 0.9450800915331807,
@@ -1129,7 +1067,6 @@
       "model": "data_only",
       "seed": 33,
       "duration_sec": 25.644673347473145,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__data_only__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.9989258861439313,
         "precision": 1.0,
@@ -1153,7 +1090,6 @@
       "model": "physics_stable",
       "seed": 33,
       "duration_sec": 25.510138750076294,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__physics_stable__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.8990332975295381,
         "precision": 0.954954954954955,
@@ -1177,7 +1113,6 @@
       "model": "data_only",
       "seed": 44,
       "duration_sec": 25.42080783843994,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__data_only__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.9924812030075187,
         "precision": 0.993963782696177,
@@ -1201,7 +1136,6 @@
       "model": "physics_stable",
       "seed": 44,
       "duration_sec": 25.749598741531372,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__physics_stable__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.8882921589688507,
         "precision": 0.9497716894977168,
@@ -1225,7 +1159,6 @@
       "model": "data_only",
       "seed": 55,
       "duration_sec": 29.28443479537964,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__data_only__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9978517722878625,
         "precision": 1.0,
@@ -1249,7 +1182,6 @@
       "model": "physics_stable",
       "seed": 55,
       "duration_sec": 27.183946132659912,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/attack_strategy_ood__poison35__physics_stable__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.9516648764769066,
         "precision": 0.9539078156312625,
@@ -1273,7 +1205,6 @@
       "model": "data_only",
       "seed": 11,
       "duration_sec": 22.749821662902832,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__data_only__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.47593984962406016,
         "precision": 0.925531914893617,
@@ -1297,7 +1228,6 @@
       "model": "physics_stable",
       "seed": 11,
       "duration_sec": 25.057811975479126,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__physics_stable__seed11/phase3_results.json",
       "metrics": {
         "accuracy": 0.3233082706766917,
         "precision": 0.18840579710144928,
@@ -1321,7 +1251,6 @@
       "model": "data_only",
       "seed": 22,
       "duration_sec": 22.34269142150879,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__data_only__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.4842105263157895,
         "precision": 0.9130434782608695,
@@ -1345,7 +1274,6 @@
       "model": "physics_stable",
       "seed": 22,
       "duration_sec": 21.861504554748535,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__physics_stable__seed22/phase3_results.json",
       "metrics": {
         "accuracy": 0.28270676691729324,
         "precision": 0.0,
@@ -1369,7 +1297,6 @@
       "model": "data_only",
       "seed": 33,
       "duration_sec": 21.844633102416992,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__data_only__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.45789473684210524,
         "precision": 0.9096385542168675,
@@ -1393,7 +1320,6 @@
       "model": "physics_stable",
       "seed": 33,
       "duration_sec": 22.225342988967896,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__physics_stable__seed33/phase3_results.json",
       "metrics": {
         "accuracy": 0.3157894736842105,
         "precision": 0.25688073394495414,
@@ -1417,7 +1343,6 @@
       "model": "data_only",
       "seed": 44,
       "duration_sec": 23.661776304244995,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__data_only__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.4699248120300752,
         "precision": 0.9269662921348315,
@@ -1441,7 +1366,6 @@
       "model": "physics_stable",
       "seed": 44,
       "duration_sec": 22.58045744895935,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__physics_stable__seed44/phase3_results.json",
       "metrics": {
         "accuracy": 0.3157894736842105,
         "precision": 0.23232323232323232,
@@ -1465,7 +1389,6 @@
       "model": "data_only",
       "seed": 55,
       "duration_sec": 23.57557725906372,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__data_only__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.4849624060150376,
         "precision": 0.9257425742574258,
@@ -1489,7 +1412,6 @@
       "model": "physics_stable",
       "seed": 55,
       "duration_sec": 23.542450189590454,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/stage3/congestion_ood__clean__physics_stable__seed55/phase3_results.json",
       "metrics": {
         "accuracy": 0.4766917293233083,
         "precision": 0.8744186046511628,
@@ -1516,7 +1438,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 30.015567302703857,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__fedavg__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.35584843492586493,
         "precision": 1.0,
@@ -1537,7 +1458,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.52986717224121,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__median__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.38632619439868204,
         "precision": 0.9154929577464789,
@@ -1558,7 +1478,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.54343342781067,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__trimmed_mean__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3517298187808896,
         "precision": 0.9473684210526315,
@@ -1579,7 +1498,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.184715270996094,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__shapley_proxy__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.4135090609555189,
         "precision": 0.9423076923076923,
@@ -1600,7 +1518,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.066706657409668,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__krum__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.42504118616144976,
         "precision": 0.9416666666666667,
@@ -1621,7 +1538,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.341808795928955,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__fedavg__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3599670510708402,
         "precision": 1.0,
@@ -1642,7 +1558,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.56163716316223,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__median__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.42174629324546953,
         "precision": 0.9811320754716981,
@@ -1663,7 +1578,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.207778930664062,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__trimmed_mean__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.35584843492586493,
         "precision": 0.9230769230769231,
@@ -1684,7 +1598,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.22303819656372,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__shapley_proxy__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3747940691927512,
         "precision": 1.0,
@@ -1705,7 +1618,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.031893253326416,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__krum__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.38797364085667213,
         "precision": 0.9692307692307692,
@@ -1726,7 +1638,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.82036304473877,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__fedavg__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.35831960461285006,
         "precision": 1.0,
@@ -1747,7 +1658,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.662098169326782,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__median__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3731466227347611,
         "precision": 1.0,
@@ -1768,7 +1678,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.144782066345215,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__trimmed_mean__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3673805601317957,
         "precision": 1.0,
@@ -1789,7 +1698,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.135927438735962,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__shapley_proxy__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.40362438220757824,
         "precision": 1.0,
@@ -1810,7 +1718,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.01568055152893,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__krum__seed11/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3649093904448105,
         "precision": 0.9714285714285714,
@@ -1831,7 +1738,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.865501642227173,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__fedavg__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1852,7 +1758,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.132960081100464,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__median__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1873,7 +1778,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.040692806243896,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__trimmed_mean__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1894,7 +1798,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.86951994895935,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__shapley_proxy__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1915,7 +1818,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.056936740875244,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__krum__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1936,7 +1838,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.044203758239746,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__fedavg__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1957,7 +1858,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.414161443710327,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__median__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1978,7 +1878,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.93068265914917,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__trimmed_mean__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -1999,7 +1898,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.080684423446655,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__shapley_proxy__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2020,7 +1918,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.366699934005737,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__krum__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2041,7 +1938,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.11867904663086,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__fedavg__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2062,7 +1958,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.920938730239868,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__median__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2083,7 +1978,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.26200246810913,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__trimmed_mean__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2104,7 +1998,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.37930727005005,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__shapley_proxy__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2125,7 +2018,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 34.90437197685242,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__krum__seed22/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2146,7 +2038,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.05847406387329,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__fedavg__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2167,7 +2058,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.336329698562622,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__median__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2188,7 +2078,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.990636110305786,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__trimmed_mean__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2209,7 +2098,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.37738823890686,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__shapley_proxy__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2230,7 +2118,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.81285834312439,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__krum__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2251,7 +2138,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.83839750289917,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__fedavg__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2272,7 +2158,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.66099739074707,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__median__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2293,7 +2178,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.017653703689575,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__trimmed_mean__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2314,7 +2198,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.91093397140503,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__shapley_proxy__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2335,7 +2218,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.11277461051941,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__krum__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2356,7 +2238,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.895509958267212,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__fedavg__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2377,7 +2258,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.913110733032227,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__median__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2398,7 +2278,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.088213682174683,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__trimmed_mean__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2419,7 +2298,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.566192865371704,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__shapley_proxy__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2440,7 +2318,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.808059215545654,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__krum__seed33/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2461,7 +2338,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 70.8475649356842,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__fedavg__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2482,7 +2358,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 70.91935324668884,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__median__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.342668863261944,
         "precision": 1.0,
@@ -2503,7 +2378,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.148606777191162,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__trimmed_mean__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3500823723228995,
         "precision": 1.0,
@@ -2524,7 +2398,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.871513843536377,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__shapley_proxy__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3393739703459638,
         "precision": 1.0,
@@ -2545,7 +2418,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.840254306793213,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__krum__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2566,7 +2438,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.092287063598633,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__fedavg__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3443163097199341,
         "precision": 1.0,
@@ -2587,7 +2458,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 20.088473081588745,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__median__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2608,7 +2478,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 19.315743684768677,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__trimmed_mean__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2629,7 +2498,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.312857151031494,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__shapley_proxy__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2650,7 +2518,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 19.457250356674194,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__krum__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3484349258649094,
         "precision": 1.0,
@@ -2671,7 +2538,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.839893579483032,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__fedavg__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2692,7 +2558,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 71.01578879356384,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__median__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2713,7 +2578,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 65.84281730651855,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__trimmed_mean__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2734,7 +2598,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.843278408050537,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__shapley_proxy__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2755,7 +2618,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.858147859573364,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__krum__seed44/phase4_federated_results.json",
       "metrics": {
         "acc": 0.3443163097199341,
         "precision": 1.0,
@@ -2776,7 +2638,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.589231967926025,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__fedavg__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2797,7 +2658,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.55542778968811,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__median__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2818,7 +2678,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.80305814743042,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__trimmed_mean__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2839,7 +2698,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.1335608959198,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__shapley_proxy__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2860,7 +2718,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.6130850315094,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/clean__krum__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2881,7 +2738,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.130314588546753,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__fedavg__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2902,7 +2758,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.064969539642334,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__median__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2923,7 +2778,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.105883598327637,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__trimmed_mean__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2944,7 +2798,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.827861785888672,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__shapley_proxy__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2965,7 +2818,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.168028593063354,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_mid__krum__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -2986,7 +2838,6 @@
       "aggregation": "fedavg",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.99590516090393,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__fedavg__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -3007,7 +2858,6 @@
       "aggregation": "median",
       "poison_mode": "clean_label_local",
       "duration_sec": 17.939558506011963,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__median__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -3028,7 +2878,6 @@
       "aggregation": "trimmed_mean",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.30224108695984,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__trimmed_mean__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -3049,7 +2898,6 @@
       "aggregation": "shapley_proxy",
       "poison_mode": "clean_label_local",
       "duration_sec": 66.17432451248169,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__shapley_proxy__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,
@@ -3070,7 +2918,6 @@
       "aggregation": "krum",
       "poison_mode": "clean_label_local",
       "duration_sec": 18.45022225379944,
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/fed/poison_high__krum__seed55/phase4_federated_results.json",
       "metrics": {
         "acc": 0.33772652388797364,
         "precision": 0.0,

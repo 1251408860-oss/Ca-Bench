@@ -6,7 +6,7 @@ This module implements the Mininet-based scenario generation component of Ca-Ben
 
 The generated traffic traces serve as the primary data source for graph construction and downstream model evaluation.
 
-The repository already bundles the five paper captures under `real_collection/scenario_*/full_arena_v2.pcap`, so rerunning this module is optional for reviewers who only need offline reproduction.
+The repository checkout includes the five paper captures under `real_collection/scenario_*/full_arena_v2.pcap`, and the same directory is also mirrored in the `data-v1` GitHub Release. Rerunning this module is therefore optional for reviewers who only need offline reproduction.
 
 ## Environment and Dependency Preparation
 
@@ -40,6 +40,8 @@ If reviewers want to regenerate the LLM payload file itself, they can opt in exp
 ```bash
 sudo -E REGENERATE_PAYLOADS=1 REQUIRE_REAL_LLM=1 LLM_API_KEY=... bash run_capture_batch2.sh
 ```
+
+`run_capture_batch2.sh` uses `python` from the active shell environment by default. Set `PY_BIN=/path/to/python` if a different interpreter is required.
 
 This module must be executed in a real Mininet-capable environment. It is not a pure Python preprocessing step.
 

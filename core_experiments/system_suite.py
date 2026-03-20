@@ -954,7 +954,7 @@ def run_system_overhead(
 def main() -> None:
     p = argparse.ArgumentParser(description="Run system-level experiments")
     p.add_argument("--project-dir", default=str(REPO_ROOT))
-    p.add_argument("--python-bin", default="/home/user/miniconda3/envs/DL/bin/python")
+    p.add_argument("--python-bin", default="python")
     p.add_argument("--real-collection-dir", default=str(DATA_ROOT))
     p.add_argument("--output-root", default=str(RUN_ROOT))
     p.add_argument("--skip-existing", action="store_true")

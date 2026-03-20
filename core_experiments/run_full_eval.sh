@@ -4,9 +4,15 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PROJECT_DIR="$ROOT_DIR/core_experiments"
 DATA_DIR="$ROOT_DIR/mininet_testbed/real_collection"
-PY_BIN="${PY_BIN:-/home/user/miniconda3/envs/DL/bin/python}"
+PY_BIN="${PY_BIN:-python}"
 RUN_ROOT="${RUN_ROOT:-$ROOT_DIR/paper_artifacts/runs}"
 SEEDS_STAGE3="${SEEDS_STAGE3:-11,22,33,44,55}"
+USE_MANUSCRIPT_REFERENCE="${USE_MANUSCRIPT_REFERENCE:-0}"
+
+MANUSCRIPT_ARGS=()
+if [[ "$USE_MANUSCRIPT_REFERENCE" == "1" ]]; then
+  MANUSCRIPT_ARGS+=(--use-manuscript-reference)
+fi
 
 cd "$PROJECT_DIR"
 
@@ -32,6 +38,7 @@ cd "$PROJECT_DIR"
   --network-sensitivity-dir "$RUN_ROOT/network_sensitivity" \
   --edge-suite-dir "$RUN_ROOT/edge_budget" \
   --overhead-dir "$RUN_ROOT/system_overhead" \
+  "${MANUSCRIPT_ARGS[@]}" \
   --output-dir "$ROOT_DIR/paper_artifacts"
 
 echo "[DONE] runs: $RUN_ROOT"

@@ -1,9 +1,5 @@
 {
   "config": {
-    "project_dir": "/home/user/FedSTGCN",
-    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
-    "real_collection_dir": "/home/user/FedSTGCN/real_collection",
-    "output_dir": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid",
     "train_scenarios": "scenario_d_three_tier_low2,scenario_e_three_tier_high2,scenario_f_two_tier_high2",
     "val_scenarios": "scenario_g_mimic_congest",
     "test_scenarios": "scenario_h_mimic_heavy_overlap",
@@ -17,8 +13,6 @@
     "min_keep_per_class": 64,
     "overlap_features": "ln(N+1),ln(T+1),entropy,pkt_rate,avg_pkt_size,port_diversity"
   },
-  "merged_graph": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/graphs/cross_scenario_merged.pt",
-  "eval_graph": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/graphs/cross_scenario_eval.pt",
   "train_scenarios": [
     "scenario_d_three_tier_low2",
     "scenario_e_three_tier_high2",
@@ -236,10 +230,7 @@
         "auprc": 0.9906095259597268,
         "ece": 0.27837979793548584,
         "fpr": 0.0
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed11/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed11/pi_gnn_model.pt",
-      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed11/predictions.json"
+      }
     },
     {
       "seed": 22,
@@ -257,10 +248,7 @@
         "auprc": 0.9707205453847396,
         "ece": 0.18340539932250977,
         "fpr": 0.002018842530282638
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed22/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed22/pi_gnn_model.pt",
-      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed22/predictions.json"
+      }
     },
     {
       "seed": 33,
@@ -278,10 +266,7 @@
         "auprc": 0.940298629796784,
         "ece": 0.16854646801948547,
         "fpr": 0.0
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed33/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed33/pi_gnn_model.pt",
-      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed33/predictions.json"
+      }
     },
     {
       "seed": 44,
@@ -299,10 +284,7 @@
         "auprc": 0.9547157844067856,
         "ece": 0.22233183681964874,
         "fpr": 0.0
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed44/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed44/pi_gnn_model.pt",
-      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed44/predictions.json"
+      }
     },
     {
       "seed": 55,
@@ -320,10 +302,7 @@
         "auprc": 0.977365619668367,
         "ece": 0.20482495427131653,
         "fpr": 0.0
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed55/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed55/pi_gnn_model.pt",
-      "prediction_file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/stage3/cross_scenario__data_only__seed55/predictions.json"
+      }
     }
   ],
   "rows_baseline": [
@@ -405,8 +384,7 @@
           "fn": 1467,
           "tn": 1486
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed11/baseline_eval.json"
+      }
     },
     {
       "seed": 22,
@@ -486,8 +464,7 @@
           "fn": 1444,
           "tn": 1483
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed22/baseline_eval.json"
+      }
     },
     {
       "seed": 33,
@@ -567,8 +544,7 @@
           "fn": 1414,
           "tn": 1486
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed33/baseline_eval.json"
+      }
     },
     {
       "seed": 44,
@@ -648,8 +624,7 @@
           "fn": 1424,
           "tn": 1486
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed44/baseline_eval.json"
+      }
     },
     {
       "seed": 55,
@@ -729,8 +704,7 @@
           "fn": 1436,
           "tn": 1486
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase3_cross_scenario_stress_valid/baseline/seed55/baseline_eval.json"
+      }
     }
   ],
   "per_scenario_rows": [

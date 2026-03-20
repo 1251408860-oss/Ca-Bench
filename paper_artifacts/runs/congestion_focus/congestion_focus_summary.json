@@ -1,16 +1,10 @@
 {
   "config": {
-    "project_dir": "/home/user/FedSTGCN",
-    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
-    "suite_dir": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite",
-    "output_dir": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus",
-    "scenario_dir": "/home/user/FedSTGCN/real_collection/scenario_e_three_tier_high2",
     "congestion_graph": "",
     "seeds": "11,22,33,44,55,66,77,88,99",
     "epochs": 140,
     "skip_existing": true
   },
-  "graph_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/top_conf_suite/protocol_graphs/congestion_ood.pt",
   "stage3_rows": [
     {
       "seed": 11,
@@ -29,9 +23,7 @@
         "auprc": 0.6672654937688349,
         "ece": 0.5222018361091614,
         "fpr": 0.02959830866807611
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed11/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed11/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 11,
@@ -50,9 +42,7 @@
         "auprc": 0.5236021716210862,
         "ece": 0.6387230753898621,
         "fpr": 0.11839323467230443
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed11/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed11/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 22,
@@ -71,9 +61,7 @@
         "auprc": 0.6537113774007907,
         "ece": 0.5100393891334534,
         "fpr": 0.03805496828752643
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed22/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed22/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 22,
@@ -92,9 +80,7 @@
         "auprc": 0.5091057354933831,
         "ece": 0.6396967768669128,
         "fpr": 0.20507399577167018
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed22/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed22/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 33,
@@ -113,9 +99,7 @@
         "auprc": 0.6579126427964489,
         "ece": 0.5355363488197327,
         "fpr": 0.03171247357293869
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed33/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed33/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 33,
@@ -134,9 +118,7 @@
         "auprc": 0.5355403139708835,
         "ece": 0.6382811069488525,
         "fpr": 0.17124735729386892
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed33/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed33/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 44,
@@ -155,9 +137,7 @@
         "auprc": 0.6846771624128014,
         "ece": 0.5085797309875488,
         "fpr": 0.02748414376321353
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed44/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed44/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 44,
@@ -176,9 +156,7 @@
         "auprc": 0.496040913925583,
         "ece": 0.6407995820045471,
         "fpr": 0.160676532769556
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed44/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed44/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 55,
@@ -197,9 +175,7 @@
         "auprc": 0.6614567501103402,
         "ece": 0.5088597536087036,
         "fpr": 0.03171247357293869
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed55/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed55/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 55,
@@ -218,9 +194,7 @@
         "auprc": 0.6569833115872048,
         "ece": 0.625909149646759,
         "fpr": 0.05708245243128964
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed55/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed55/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 66,
@@ -239,9 +213,7 @@
         "auprc": 0.6724866455561773,
         "ece": 0.5767992734909058,
         "fpr": 0.02959830866807611
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed66/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed66/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 66,
@@ -260,9 +232,7 @@
         "auprc": 0.5583126174924284,
         "ece": 0.6258888244628906,
         "fpr": 0.035940803382663845
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed66/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed66/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 77,
@@ -281,9 +251,7 @@
         "auprc": 0.6482524462769956,
         "ece": 0.5436137318611145,
         "fpr": 0.02959830866807611
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed77/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed77/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 77,
@@ -302,9 +270,7 @@
         "auprc": 0.5595379410787634,
         "ece": 0.6245431900024414,
         "fpr": 0.0824524312896406
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed77/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed77/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 88,
@@ -323,9 +289,7 @@
         "auprc": 0.67506319346742,
         "ece": 0.5455376505851746,
         "fpr": 0.02959830866807611
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed88/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed88/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 88,
@@ -344,9 +308,7 @@
         "auprc": 0.5348761404374629,
         "ece": 0.630969226360321,
         "fpr": 0.13953488372093023
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed88/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed88/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 99,
@@ -365,9 +327,7 @@
         "auprc": 0.6880935519747158,
         "ece": 0.505711019039154,
         "fpr": 0.021141649048625793
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed99/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__data_only__seed99/pi_gnn_model.pt"
+      }
     },
     {
       "seed": 99,
@@ -386,9 +346,7 @@
         "auprc": 0.5520601620741008,
         "ece": 0.6274351477622986,
         "fpr": 0.1649048625792812
-      },
-      "result_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed99/phase3_results.json",
-      "model_file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/stage3/congestion_ood__physics_stable__seed99/pi_gnn_model.pt"
+      }
     }
   ],
   "baseline_rows": [
@@ -470,8 +428,7 @@
           "fn": 844,
           "tn": 417
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed11/baseline_eval.json"
+      }
     },
     {
       "seed": 22,
@@ -551,8 +508,7 @@
           "fn": 857,
           "tn": 376
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed22/baseline_eval.json"
+      }
     },
     {
       "seed": 33,
@@ -632,8 +588,7 @@
           "fn": 829,
           "tn": 392
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed33/baseline_eval.json"
+      }
     },
     {
       "seed": 44,
@@ -713,8 +668,7 @@
           "fn": 834,
           "tn": 397
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed44/baseline_eval.json"
+      }
     },
     {
       "seed": 55,
@@ -794,8 +748,7 @@
           "fn": 669,
           "tn": 446
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed55/baseline_eval.json"
+      }
     },
     {
       "seed": 66,
@@ -875,8 +828,7 @@
           "fn": 816,
           "tn": 456
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed66/baseline_eval.json"
+      }
     },
     {
       "seed": 77,
@@ -956,8 +908,7 @@
           "fn": 818,
           "tn": 434
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed77/baseline_eval.json"
+      }
     },
     {
       "seed": 88,
@@ -1037,8 +988,7 @@
           "fn": 821,
           "tn": 407
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed88/baseline_eval.json"
+      }
     },
     {
       "seed": 99,
@@ -1118,8 +1068,7 @@
           "fn": 820,
           "tn": 395
         }
-      },
-      "file": "/home/user/FedSTGCN/submission_runs/phase2_main_suite/congestion_focus/baseline/seed99/baseline_eval.json"
+      }
     }
   ],
   "stage3_stats": {

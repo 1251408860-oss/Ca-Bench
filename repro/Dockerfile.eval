@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1 \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /workspace/FedSTGCN
+WORKDIR /workspace/Ca-Bench
 
 COPY repro/requirements-lock-dl.txt /tmp/requirements-lock-dl.txt
 COPY repro/requirements-lock-plot.txt /tmp/requirements-lock-plot.txt

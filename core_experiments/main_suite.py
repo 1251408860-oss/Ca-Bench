@@ -448,7 +448,7 @@ def run_congestion_focus(
 def main() -> None:
     p = argparse.ArgumentParser(description="Run the paper's main experiment chain")
     p.add_argument("--project-dir", default=str(REPO_ROOT))
-    p.add_argument("--python-bin", default="/home/user/miniconda3/envs/DL/bin/python")
+    p.add_argument("--python-bin", default="python")
     p.add_argument("--real-collection-dir", default=str(DATA_ROOT))
     p.add_argument("--output-root", default=str(RUN_ROOT))
     p.add_argument("--seeds", default="11,22,33,44,55")

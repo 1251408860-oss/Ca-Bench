@@ -9,7 +9,7 @@ fi
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TESTBED_DIR="$REPO_ROOT/mininet_testbed"
 DATA_DIR="$TESTBED_DIR/real_collection"
-PY_BIN="${PY_BIN:-/home/user/miniconda3/envs/DL/bin/python}"
+PY_BIN="${PY_BIN:-python}"
 PAYLOAD_FILE="$TESTBED_DIR/llm_payloads.json"
 
 NUM_LLM_SESSIONS="${NUM_LLM_SESSIONS:-60}"

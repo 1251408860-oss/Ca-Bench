@@ -15,13 +15,13 @@ To facilitate reproducibility and provide a clear review path, the package is or
 
 The artifact package is designed for Ubuntu/Linux workflows. The online scenario generation module requires a Mininet-enabled environment with root privileges, while the offline benchmark module requires a Python environment with the project dependencies installed.
 
-Packet captures (`full_arena_v2.pcap`) are distributed as a GitHub Release asset for offline reproduction. Reviewers who want to regenerate the traces from scratch may still run the Mininet module locally.
+The five paper packet captures are available under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap` in this repository checkout. The same dataset is also mirrored as a GitHub Release asset for reviewers who prefer a separate download.
 
 An example Conda environment file is provided as [`environment.yml`](./environment.yml). Reviewers may use it as a starting point for the Python runtime setup.
 
-## Dataset Download
+## Dataset Mirror
 
-Download the packet-capture bundle for offline reproduction from the GitHub Release page:
+If your checkout already contains `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`, you can skip this section. Otherwise, download the mirrored packet-capture bundle for offline reproduction from the GitHub Release page:
 
 - Release: [`data-v1`](https://github.com/1251408860-oss/Ca-Bench/releases/tag/data-v1)
 
@@ -56,7 +56,7 @@ sudo apt-get update
 sudo apt-get install -y mininet openvswitch-switch tcpdump
 ```
 
-The Mininet scenario-generation script also requires a valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` in the shell environment.
+The default Mininet scenario-generation path reuses the bundled `mininet_testbed/llm_payloads.json` file and does not require any API key. A compatible `LLM_API_KEY`, `DEEPSEEK_API_KEY`, or `OPENAI_API_KEY` is only needed when reviewers explicitly regenerate the payload file from scratch.
 
 ### Offline benchmark dependencies
 
@@ -78,7 +78,7 @@ The Mininet scenario-generation script also requires a valid `LLM_API_KEY` or `D
 - `locust`
 - `scapy`
 - `requests`
-- A valid `LLM_API_KEY` or `DEEPSEEK_API_KEY` for the default scenario-generation script
+- A valid `LLM_API_KEY`, `DEEPSEEK_API_KEY`, or `OPENAI_API_KEY` only when regenerating `llm_payloads.json` from scratch
 
 ### Special Mininet environment requirement
 
@@ -86,4 +86,4 @@ The offline benchmark can start directly from the downloadable packet-capture bu
 
 Detailed execution commands, expected inputs, and output locations are documented in the `README.md` file of each submodule.
 
-For manuscript-facing paper outputs, `core_experiments/make_paper_tables_figs.py` now takes the `congestion_ood` values for Table 1 and Figure 1 from `paper_artifacts/runs/main_suite/` by default so the generated summary stays aligned with the submitted paper. The separate `congestion_focus` run remains available as an auxiliary stress sweep. The submitted table values are additionally frozen in [`paper_artifacts/manuscript_reference.json`](./paper_artifacts/manuscript_reference.json), which is used only when regenerating the paper-ready tables.
+By default, `core_experiments/make_paper_tables_figs.py` regenerates tables and figures directly from the public run summaries under `paper_artifacts/runs/`. The frozen manuscript values in [`paper_artifacts/manuscript_reference.json`](./paper_artifacts/manuscript_reference.json) are retained as an optional export path and are only applied when the caller passes `--use-manuscript-reference` or sets `USE_MANUSCRIPT_REFERENCE=1` for `core_experiments/run_full_eval.sh`.

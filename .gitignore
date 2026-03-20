@@ -3,3 +3,8 @@ __pycache__/
 *.log
 *.pt
 *.pth
+repro_output/
+repro_runs/
+real_collection.tar.gz
+real_collection.tar.gz.sha256
+BLOCKSYS_HITRUST_EXPERIMENT_DEV_DOC.md

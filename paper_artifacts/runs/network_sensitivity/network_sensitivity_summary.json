@@ -1,9 +1,5 @@
 {
   "config": {
-    "project_dir": "/home/user/FedSTGCN",
-    "python_bin": "/home/user/miniconda3/envs/DL/bin/python",
-    "real_collection_dir": "/home/user/FedSTGCN/real_collection",
-    "output_dir": "/home/user/FedSTGCN/submission_runs/phase5_wasa_network_sensitivity",
     "scenarios": "scenario_d_three_tier_low2,scenario_e_three_tier_high2,scenario_f_two_tier_high2,scenario_g_mimic_congest,scenario_h_mimic_heavy_overlap",
     "seeds": "11,22,33",
     "epochs": 110,

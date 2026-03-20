@@ -554,6 +554,11 @@ def main() -> None:
     ap.add_argument("--edge-suite-dir", default=str(RUN_ROOT / "edge_budget"))
     ap.add_argument("--overhead-dir", default=str(RUN_ROOT / "system_overhead"))
     ap.add_argument("--manuscript-reference", default=str(MANUSCRIPT_REFERENCE))
+    ap.add_argument(
+        "--use-manuscript-reference",
+        action="store_true",
+        help="export the frozen manuscript tables from manuscript_reference.json instead of regenerating from public runs",
+    )
     ap.add_argument("--output-dir", default=str(OUTPUT_ROOT))
     args = ap.parse_args()
 
@@ -561,7 +566,7 @@ def main() -> None:
     output_root = Path(args.output_dir).resolve()
     tables_dir, figures_dir = ensure_dirs(output_root)
 
-    manuscript = maybe_read_json(Path(args.manuscript_reference).resolve())
+    manuscript = maybe_read_json(Path(args.manuscript_reference).resolve()) if bool(args.use_manuscript_reference) else None
     top = maybe_read_json(Path(args.suite_dir).resolve() / "top_conf_summary.json")
     baseline = maybe_read_json(Path(args.suite_dir).resolve() / "baseline_significance" / "baseline_significance_summary.json")
     congestion = maybe_read_json(Path(args.congestion_focus_dir).resolve() / "congestion_focus_summary.json")

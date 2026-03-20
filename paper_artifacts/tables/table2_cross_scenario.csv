@@ -1,5 +1,5 @@
 scenario,model,f1,recall,fpr
-scenario_h_mimic_heavy_overlap,data_only,0.7323,0.5777,0.0004
-scenario_h_mimic_heavy_overlap,gcn,0.7663,0.641,0.0674
-scenario_h_mimic_heavy_overlap,graphsage,0.7604,0.6145,0.0038
-scenario_h_mimic_heavy_overlap,gatv2,0.7288,0.5615,0.0182
+scenario_h_mimic_heavy_overlap,data_only,0.732256159143676,0.5777255362915075,0.0004037685060565276
+scenario_h_mimic_heavy_overlap,gcn,0.7662747494059498,0.6409638554216868,0.0674293405114401
+scenario_h_mimic_heavy_overlap,graphsage,0.7603908797262485,0.6144578313253012,0.003768506056527591
+scenario_h_mimic_heavy_overlap,gatv2,0.7148876562794843,0.5615045548045842,0.01816958277254374

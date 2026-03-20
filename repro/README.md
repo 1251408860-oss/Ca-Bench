@@ -1,84 +1,72 @@
 # Reproducibility Guide
 
-This folder provides one-click scripts and environment locks for the FedSTGCN "recharge" package.
+This folder provides the locked environments and the optional evaluation container for `Ca-Bench`. The runnable entrypoints live under `core_experiments/` and `mininet_testbed/`.
 
 ## Locked Environment Files
-- `requirements-lock-dl.txt`: training/evaluation dependencies.
-- `requirements-lock-plot.txt`: paper plotting dependencies.
-- `environment-lock-dl.yml`: conda export for DL environment.
-- `Dockerfile.eval`: containerized eval/plot environment (no Mininet capture).
+- `requirements-lock-dl.txt`: training and evaluation dependencies
+- `requirements-lock-plot.txt`: plotting dependencies
+- `environment-lock-dl.yml`: exported conda environment for the original evaluation stack
+- `Dockerfile.eval`: containerized evaluation and plotting environment without Mininet capture support
 
-## One-Click Evaluation (Ubuntu1)
-From `/home/user/FedSTGCN`:
+## One-Click Full Evaluation
+From the repository root:
 
 ```bash
-bash repro/run_oneclick_recharge.sh
+bash core_experiments/run_full_eval.sh
 ```
 
 Optional overrides:
 
 ```bash
-PY_BIN=/home/user/miniconda3/envs/DL/bin/python \
-OUT_DIR=/home/user/FedSTGCN/top_conf_suite_recharge \
+PY_BIN=python \
+RUN_ROOT="$PWD/paper_artifacts/runs" \
 SEEDS_STAGE3=11,22,33,44,55 \
-SEEDS_FED9=11,22,33,44,55,66,77,88,99 \
-bash repro/run_oneclick_recharge.sh
+USE_MANUSCRIPT_REFERENCE=1 \
+bash core_experiments/run_full_eval.sh
 ```
 
 Expected key outputs:
-- `top_conf_suite_recharge/top_conf_summary.json`
-- `top_conf_suite_recharge/baseline_significance/baseline_significance_summary.json`
-- `top_conf_suite_recharge/fed_sig_ext9/fed_sig_ext9_summary.json`
-- `top_conf_suite_recharge/fed_cross_protocol/fed_cross_protocol_summary.json`
-- `top_conf_suite_recharge/paper_ready_plus/MASTER_SUMMARY.md`
-- `top_conf_suite_recharge/paper_ready_plus/multiple_testing_corrections.md`
+- `paper_artifacts/runs/main_suite/top_conf_summary.json`
+- `paper_artifacts/runs/cross_scenario/cross_scenario_summary.json`
+- `paper_artifacts/runs/congestion_focus/congestion_focus_summary.json`
+- `paper_artifacts/runs/network_sensitivity/network_sensitivity_summary.json`
+- `paper_artifacts/runs/edge_budget/edge_suite_summary.json`
+- `paper_artifacts/runs/system_overhead/overhead_summary.json`
+- `paper_artifacts/tables/*.csv`
+- `paper_artifacts/figures/*.png`
 
-## Independent Batch2 Capture (Ubuntu root)
-Run as root in Mininet-capable distro (typically `Ubuntu`):
+## Optional Packet-Capture Regeneration
+Run as root on a Mininet-capable Linux host:
 
 ```bash
-sudo -E bash repro/run_capture_batch2.sh
+sudo -E bash mininet_testbed/run_capture_batch2.sh
 ```
 
-Required env vars:
-- `LLM_API_KEY` or `DEEPSEEK_API_KEY`
+The default path reuses the bundled `mininet_testbed/llm_payloads.json` and does not require an API key. A compatible `LLM_API_KEY`, `DEEPSEEK_API_KEY`, or `OPENAI_API_KEY` is only needed when regenerating payloads from scratch, for example:
 
-Recommended stable LLM transport defaults (already set in script):
-- `KEEP_PROXY=0`
-- `LLM_TRANSPORT=requests`
-- `LLM_TIMEOUT_SEC=120`
+```bash
+sudo -E REGENERATE_PAYLOADS=1 REQUIRE_REAL_LLM=1 LLM_API_KEY=... \
+  bash mininet_testbed/run_capture_batch2.sh
+```
 
 Expected outputs:
-- `real_collection/scenario_i_three_tier_low_b2/`
-- `real_collection/scenario_j_three_tier_high_b2/`
-- `real_collection/scenario_k_two_tier_high_b2/`
-- `real_collection/scenario_l_mimic_heavy_b2/`
+- `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`
+- `mininet_testbed/real_collection/scenario_*/arena_manifest_v2.json`
+- `mininet_testbed/real_collection/scenario_*/mininet.log`
 
-Each scenario should contain:
-- `full_arena_v2.pcap`
-- `arena_manifest_v2.json` (with `run_config.arena_seed`)
-- `mininet.log`
-
-## Windows Launcher
-From Windows PowerShell:
-
-```powershell
-.\repro\run_oneclick.ps1
-```
-
-## Docker (Evaluation/Plot Only)
-Build inside repo root:
+## Docker (Evaluation and Plotting Only)
+Build inside the repo root:
 
 ```bash
-docker build -f repro/Dockerfile.eval -t fedstgcn-eval .
+docker build -f repro/Dockerfile.eval -t cabench-eval .
 ```
 
 Run:
 
 ```bash
-docker run --rm -it -v "$PWD:/workspace/FedSTGCN" fedstgcn-eval
+docker run --rm -it -v "$PWD:/workspace/Ca-Bench" cabench-eval
 ```
 
-Note:
-- Container image is for model/eval/plot reproducibility only.
-- Mininet real capture requires host networking privileges and is intentionally excluded from container workflow.
+Notes:
+- The container is intended for model evaluation and figure generation only.
+- Mininet capture requires host networking privileges and is intentionally excluded from the container workflow.
