@@ -15,13 +15,29 @@ To facilitate reproducibility and provide a clear review path, the package is or
 
 The artifact package is designed for Ubuntu/Linux workflows. The online scenario generation module requires a Mininet-enabled environment with root privileges, while the offline benchmark module requires a Python environment with the project dependencies installed.
 
-The five paper packet captures are available under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap` in this repository checkout. The same dataset is also mirrored as a GitHub Release asset for reviewers who prefer a separate download.
+The five paper packet captures are available under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap` in this repository checkout. The same data is also available through an anonymous repository archive and a public GitHub Release mirror for reviewers who prefer a separate download.
 
 An example Conda environment file is provided as [`environment.yml`](./environment.yml). Reviewers may use it as a starting point for the Python runtime setup.
 
-## Dataset Mirror
+## Dataset Mirrors
 
-If your checkout already contains `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`, you can skip this section. Otherwise, download the mirrored packet-capture bundle for offline reproduction from the GitHub Release page:
+If your checkout already contains `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`, you can skip this section.
+
+For double-anonymous review, use the anonymous repository archive below. The anonymous proxy may mask direct GitHub Release URLs as `XXXX`, but the anonymous archive link remains stable and already includes the five packet captures.
+
+- Anonymous archive: `https://anonymous.4open.science/api/repo/Ca-Bench-E54F/zip`
+
+From an empty working directory:
+
+```bash
+mkdir -p cabench_anon
+cd cabench_anon
+wget -O Ca-Bench-E54F.zip https://anonymous.4open.science/api/repo/Ca-Bench-E54F/zip
+unzip Ca-Bench-E54F.zip
+ls mininet_testbed/real_collection/*/full_arena_v2.pcap
+```
+
+If you are using the non-anonymous GitHub repository and prefer a smaller data-only mirror, the public release asset remains available:
 
 - Release: [`data-v1`](https://github.com/1251408860-oss/Ca-Bench/releases/tag/data-v1)
 
@@ -34,7 +50,7 @@ sha256sum -c real_collection.tar.gz.sha256
 tar -xzf real_collection.tar.gz
 ```
 
-This will populate:
+Either path will populate:
 
 ```bash
 mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap

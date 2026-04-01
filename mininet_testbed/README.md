@@ -6,7 +6,7 @@ This module implements the Mininet-based scenario generation component of Ca-Ben
 
 The generated traffic traces serve as the primary data source for graph construction and downstream model evaluation.
 
-The repository checkout includes the five paper captures under `real_collection/scenario_*/full_arena_v2.pcap`, and the same directory is also mirrored in the `data-v1` GitHub Release. Rerunning this module is therefore optional for reviewers who only need offline reproduction.
+The repository checkout includes the five paper captures under `real_collection/scenario_*/full_arena_v2.pcap`. For double-anonymous review, the root [`README.md`](../README.md) provides an anonymous repository archive link that already contains this directory. The non-anonymous GitHub repository also keeps the same data in the `data-v1` release mirror. Rerunning this module is therefore optional for reviewers who only need offline reproduction.
 
 ## Environment and Dependency Preparation
 

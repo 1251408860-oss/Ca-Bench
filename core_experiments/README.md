@@ -35,7 +35,7 @@ Before running this module, ensure that the scenario captures already exist unde
 ../mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap
 ```
 
-These packet captures are included in the repository checkout for the five paper scenarios. The same dataset is also mirrored in the `data-v1` GitHub Release for users who prefer a separate download.
+These packet captures are included in the repository checkout for the five paper scenarios. For double-anonymous review, the root [`README.md`](../README.md) also provides an anonymous archive link that already contains the same `mininet_testbed/real_collection/` directory. The non-anonymous GitHub repository additionally exposes the smaller `data-v1` release mirror.
 
 For direct regeneration of the paper figures and tables, the precomputed run summaries required by `make_paper_tables_figs.py` are also shipped under `../paper_artifacts/runs/`.
 
