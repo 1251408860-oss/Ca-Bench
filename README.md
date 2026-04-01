@@ -15,7 +15,7 @@ To facilitate reproducibility and provide a clear review path, the package is or
 
 The artifact package is designed for Ubuntu/Linux workflows. The online scenario generation module requires a Mininet-enabled environment with root privileges, while the offline benchmark module requires a Python environment with the project dependencies installed.
 
-The five paper packet captures are available under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap` in this repository checkout. The same data is also available through an anonymous repository archive and a public GitHub Release mirror for reviewers who prefer a separate download.
+The five paper packet captures are available under `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap` in this repository checkout. The same data is also available through the anonymous repository page download and a public GitHub Release mirror for reviewers who prefer a separate download.
 
 An example Conda environment file is provided as [`environment.yml`](./environment.yml). Reviewers may use it as a starting point for the Python runtime setup.
 
@@ -23,21 +23,18 @@ An example Conda environment file is provided as [`environment.yml`](./environme
 
 If your checkout already contains `mininet_testbed/real_collection/scenario_*/full_arena_v2.pcap`, you can skip this section.
 
-For double-anonymous review, use the anonymous repository archive below. The anonymous proxy may mask direct GitHub Release URLs as `XXXX`, but the anonymous archive link remains stable and already includes the five packet captures.
+For double-anonymous review, use the **Download** button on the anonymous repository page to download the full anonymous repository archive. That archive already includes the five packet captures. Literal URLs may be masked as `XXXX` by the anonymous proxy, so the review path below intentionally refers to the repository page action instead of an inline URL.
 
-- Anonymous archive: `https://anonymous.4open.science/api/repo/Ca-Bench-E54F/zip`
-
-From an empty working directory:
+From an empty working directory after downloading the anonymous archive:
 
 ```bash
 mkdir -p cabench_anon
 cd cabench_anon
-wget -O Ca-Bench-E54F.zip https://anonymous.4open.science/api/repo/Ca-Bench-E54F/zip
-unzip Ca-Bench-E54F.zip
+unzip /path/to/the_downloaded_anonymous_archive.zip
 ls mininet_testbed/real_collection/*/full_arena_v2.pcap
 ```
 
-If you are using the non-anonymous GitHub repository and prefer a smaller data-only mirror, the public release asset remains available:
+If you are using the non-anonymous GitHub repository and prefer a smaller data-only mirror, the public release asset remains available. Those public GitHub URLs are only intended for the non-anonymous repository view and may appear masked on the anonymous proxy:
 
 - Release: [`data-v1`](https://github.com/1251408860-oss/Ca-Bench/releases/tag/data-v1)
 
